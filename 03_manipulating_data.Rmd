@@ -13,3 +13,10 @@ Spatial operations
 
 Aggregation
 
+Filtering
+
+Filter vs. maplimits: far-away islands
+
+Joining
+
+Brussels region + provinces
