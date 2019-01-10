@@ -1,0 +1,15 @@
+---
+title: "Tweak"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+* manipulating data of interest
+* manupulating spatial data
+
+Spatial operations
+
+Aggregation
+

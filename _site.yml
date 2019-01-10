@@ -1,0 +1,18 @@
+name: "my-website"
+navbar:
+  title: "Thematic maps in R"
+  left:
+    - text: "0. Introduction"
+      href: 00_introduction.html
+    - text: "1. Reading data"
+      href: 01_reading_data.html
+    - text: "2. Joining data"
+      href: 02_joining_data.html
+    - text: "3. Manipulating data"
+      href: 03_manipulating_data.html
+    - text: "4. Plotting maps"
+      href: 04_plotting_maps.html
+    - text: "5. Tweaking maps"
+      href: 05_tweaking_maps.html
+    - text: "6. Exporting maps"
+      href: 06_exporting_maps.html

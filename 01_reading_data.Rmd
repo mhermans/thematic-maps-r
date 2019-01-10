@@ -1,0 +1,134 @@
+---
+title: "Reading data"
+output: 
+    html_document:
+      number_sections: yes
+      toc: yes
+      toc_float: yes
+---
+
+* Reading in data of interest ('information to display')
+* Reading in spatial data ('the lines on the map') ...
+    - ... from downloaded files.
+    - ... through R-packages.
+
+# Reading in data of interest
+
+haven
+readxl
+readr
+
+# Reading in spatial data
+
+More about this website.
+
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(sf)
+library(dplyr)
+library(ggplot2)
+```
+
+
+## Spatial data in R-packages
+
+### Belgium
+
+* Statistical sectors
+* Munci
+* 
+
+```{r}
+
+```
+
+
+## Europe
+
+```{r, message=FALSE, warning=FALSE}
+library(eurostat)
+eu_nuts0 <- get_eurostat_geospatial(
+  resolution = "60", # detail 
+  nuts_level = "0") # NUTS 0-3
+
+eu_nuts2 <- get_eurostat_geospatial(
+  resolution = "60", # detail 
+  nuts_level = "2") # NUTS 0-3
+```
+
+
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(eu_nuts0) +
+  geom_sf() +
+  coord_sf(
+    # limit map to 'mainland' EU
+    xlim = c(2500000, 6000000), ylim =c(1500000, 5300000),
+    crs = 3035)
+```
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(eu_nuts2) +
+  geom_sf() +
+  coord_sf(xlim = c(2500000, 6000000), 
+           ylim =c(1500000, 5300000), crs = 3035)
+```
+
+## World
+
+```{r, message=FALSE, warning=FALSE}
+library("rworldmap")
+world <- getMap(resolution = "low")
+world <- st_as_sf(world)
+```
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(world) +
+  geom_sf()
+```
+
+```{r}
+ggplot(world) +
+  geom_sf() +  
+  coord_sf(xlim = c(2500000, 6000000), 
+           ylim =c(1500000, 5300000), crs = 3035)
+```
+
+```{r, message=FALSE, warning=FALSE}
+m.latam <- world %>% 
+  filter(GEO3 == 'South America')
+
+ggplot(m.latam) +
+  geom_sf()
+```
+
+
+```{r, message=FALSE, warning=FALSE}
+m.benelux <- world %>%
+  filter(NAME %in% c('Belgium', 'Netherlands', 'Luxembourg'))
+
+ggplot(m.benelux) +
+  geom_sf() +  
+  coord_sf(xlim = c(3700000, 4300000), 
+           ylim =c(2800000, 3500000), crs = 3035)
+```
+
+
+# Downloaded spatial data 
+
+```{r}
+library(rgdal)
+#readOGR()
+```
+
+
+## API
+
+
+```{r}
+#library(rgdal)
+#library(sf)
+#readOGR('https://opendata.brussel.be/explore/dataset/bruxelles_distributeurs_bancaires/download/?format=geojson') %>%
+  
+```
+
