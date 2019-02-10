@@ -315,6 +315,7 @@ div.tocify {
 <pre class="r"><code>library(BelgiumMaps.StatBel)
 library(tmap)
 library(tmaptools)
+library(sf)
 library(dplyr)
 library(readr)
 library(readxl)
@@ -328,66 +329,113 @@ library(haven)</code></pre>
 <li><a href="https://readxl.tidyverse.org/">readxl</a>: read in Excel-files (.xlsx, .xls).</li>
 <li><a href="https://haven.tidyverse.org/">haven</a>: read/write datasets from SAS, SPSS, Stata.</li>
 </ul>
-<pre class="r"><code># read in employment/unemployment numbers
+<pre class="r"><code># read in Belfius socio-economic municipality typology
+
+data_muni &lt;- read_excel(&#39;data/muni_typology.xlsx&#39;)    # Excel
+data_muni &lt;- read_sas(&#39;data/muni_typology.sas7bdat&#39;)  # SAS
+data_muni &lt;- read_dta(&#39;data/muni_typology.dta&#39;)       # Stata
+data_muni &lt;- read_sav(&#39;data/muni_typology.sav&#39;)       # SPSS
 
 # CSV
-data_muni &lt;- read_csv(&#39;data/muni_typology.csv&#39;, col_types = cols(.default = col_character()))
-
-# Excel
-
-
-# SAS
-
-
-# Stata</code></pre>
+data_muni &lt;- read_csv( 
+  file = &#39;data/muni_typology.csv&#39;, 
+  col_types = cols(.default = col_character()))       # explicit: all strings</code></pre>
 </div>
 <div id="join-spatial-data-and-data-of-interest" class="section level1">
 <h1>Join spatial data and data-of interest</h1>
 <p>Recommended options:</p>
 <ol style="list-style-type: decimal">
-<li>general dataframe-join functions from dplyr: <code>left_join()</code>.</li>
-<li>map-specific helper function from tmaptools: ``.</li>
+<li>general dataframe-<a href="https://stat545.com/bit001_dplyr-cheatsheet.html">join functions from dplyr</a>: <code>left_join()</code>.</li>
+<li>map-specific <a href="https://rdrr.io/cran/tmaptools/man/append_data.html">helper function from tmaptools</a>: <code>append_data()</code>.</li>
 </ol>
 <pre class="r"><code># option 1 (dplyr): 
-data = left_join(map_data, data_of_interest, by = &quot;identifier&quot;)
-data = left_join(map_data, data_of_interest, by = c(&quot;map_identifier&quot; = &quot;data_identifier&quot;))</code></pre>
-<pre class="r"><code># option 2 (maptools):</code></pre>
+library(dplyr)
+data &lt;- left_join(map_data, data_of_interest, by = &quot;identifier&quot;)
+data &lt;- left_join(map_data, data_of_interest, by = c(&quot;map_identifier&quot; = &quot;data_identifier&quot;))</code></pre>
+<pre class="r"><code># option 2 (maptools):
+library(tmaptools)
+data &lt;- append_data(map_data, data_of_interest, 
+                    key.shp = &quot;map_identifier&quot;, key.data = &quot;data_identifier&quot;)</code></pre>
 </div>
 <div id="examples" class="section level1">
 <h1>Examples</h1>
 <div id="ex.-municipal-socio-economic-typology" class="section level2">
-<h2>EX. Municipal socio-economic typology</h2>
-<pre class="r"><code>data(&quot;BE_ADMIN_MUNTY&quot;)
+<h2>Ex. Municipal socio-economic typology</h2>
+<pre class="r"><code># load map data
+data(&quot;BE_ADMIN_MUNTY&quot;)
 map_muni &lt;- st_as_sf(BE_ADMIN_MUNTY)
+
+# load data-of-interest
 data_muni &lt;- read_csv(&#39;data/muni_typology.csv&#39;, col_types = cols(.default = col_character()))
+
+# join with left_join()
 muni &lt;- left_join(map_muni, data_muni, by = c(&#39;CD_MUNTY_REFNIS&#39; = &#39;gemeente_nis_code&#39;))</code></pre>
-<pre class="r"><code>qtm(muni, fill = &#39;hoofdcluster_lbl&#39;)</code></pre>
+<pre class="r"><code>qtm(muni, fill = &#39;hoofdcluster_lbl&#39;, fill.title = &#39;Socio-economic cluster&#39;)</code></pre>
 <p><img src="02_add_data_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
-<div id="ex.-percentage-of-part-time-workers-in-eu-countries" class="section level2">
-<h2>EX. Percentage of part-time workers in EU-countries</h2>
-<pre class="r"><code>library(eurostat)
+<div id="ex.-part-time-workers-in-the-eu" class="section level2">
+<h2>Ex. Part-time workers in the EU</h2>
+<pre class="r"><code># Read Eurostat data on percentage of part-time employment 
+worktime_data &lt;- read_excel(&#39;data/eurostat_workingtime_2017.xlsx&#39;)</code></pre>
+<pre class="r"><code># alternatively, fetch this data directly:
+library(eurostat)
 worktime_data &lt;- get_eurostat(&#39;lfsi_pt_a&#39;) %&gt;%
   filter(age == &#39;Y20-64&#39;, 
          worktime == &#39;TEMP&#39;, 
          sex == &#39;T&#39;, 
          time == &#39;2017-01-01&#39;, 
-         unit == &#39;PC_EMP&#39;)
-
-# alternative, load saved eurostat-data:
-#XXXX
-#XXXX
-#XXXX
-#XXXX</code></pre>
-<pre class="r"><code>map_data &lt;- get_eurostat_geospatial(
+         unit == &#39;PC_EMP&#39;)</code></pre>
+<pre class="r"><code># load EU NUTS0 (country) map data directly from Eurostat
+map_data &lt;- get_eurostat_geospatial(
   resolution = &quot;60&quot;, # detail 
   nuts_level = &quot;0&quot;) # NUTS 0-3
 
+# crop map data to &quot;mainland&quot; EU
 map_data &lt;- st_crop(map_data, c(xmin=-10, xmax=45, ymin=36, ymax=71))</code></pre>
-<pre class="r"><code>worktime &lt;- left_join(map_data, worktime_data, by = c(&#39;CNTR_CODE&#39; = &#39;geo&#39;))</code></pre>
+<pre class="r"><code># join map and workingtime data in one dataframe
+worktime &lt;- left_join(map_data, worktime_data, by = c(&#39;CNTR_CODE&#39; = &#39;geo&#39;))</code></pre>
 <pre class="r"><code>qtm(worktime, fill = &#39;values&#39;, fill.title = &#39;Percentage part-time&#39;)</code></pre>
-<p><img src="02_add_data_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<pre class="r"><code># countrycode</code></pre>
+<p><img src="02_add_data_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><strong>Tip</strong>: Use the R <a href="https://github.com/vincentarelbundock/countrycode#r-countrycode">countrycode package</a> to convert names, codes, etc. before merging. Contains 30+ different country coding schemes, and to 600+ variants of country names in different languages and formats.</p>
+<pre class="r"><code>library(countrycode)
+countrycode(worktime$NUTS_ID, &#39;eurostat&#39;, &#39;ecb&#39;) # official ECB code</code></pre>
+<pre><code>##  [1] &quot;AT&quot; &quot;BG&quot; &quot;CZ&quot; &quot;CH&quot; &quot;BE&quot; &quot;DE&quot; &quot;DK&quot; &quot;EE&quot; &quot;GR&quot; &quot;ES&quot; &quot;HR&quot; &quot;HU&quot; &quot;FI&quot; &quot;FR&quot;
+## [15] &quot;IE&quot; &quot;LI&quot; &quot;LT&quot; &quot;LU&quot; &quot;LV&quot; &quot;ME&quot; &quot;MK&quot; &quot;MT&quot; &quot;NL&quot; &quot;IT&quot; &quot;PT&quot; &quot;RO&quot; &quot;NO&quot; &quot;PL&quot;
+## [29] &quot;SE&quot; &quot;SK&quot; &quot;TR&quot; &quot;GB&quot; &quot;SI&quot;</code></pre>
+<pre class="r"><code>countrycode(worktime$NUTS_ID, &#39;eurostat&#39;, &#39;un.name.fr&#39;) # full UN name in FR</code></pre>
+<pre><code>##  [1] &quot;Autriche&quot;                                           
+##  [2] &quot;Bulgarie&quot;                                           
+##  [3] &quot;République tchèque&quot;                                 
+##  [4] &quot;Suisse&quot;                                             
+##  [5] &quot;Belgique&quot;                                           
+##  [6] &quot;Allemagne&quot;                                          
+##  [7] &quot;Danemark&quot;                                           
+##  [8] &quot;Estonie&quot;                                            
+##  [9] &quot;Grèce&quot;                                              
+## [10] &quot;Espagne&quot;                                            
+## [11] &quot;Croatie&quot;                                            
+## [12] &quot;Hongrie&quot;                                            
+## [13] &quot;Finlande&quot;                                           
+## [14] &quot;France&quot;                                             
+## [15] &quot;Irlande&quot;                                            
+## [16] &quot;Liechtenstein&quot;                                      
+## [17] &quot;Lituanie&quot;                                           
+## [18] &quot;Luxembourg&quot;                                         
+## [19] &quot;Lettonie&quot;                                           
+## [20] &quot;Monténégro&quot;                                         
+## [21] &quot;Ex-République yougoslave de Macédoine&quot;              
+## [22] &quot;Malte&quot;                                              
+## [23] &quot;Pays-Bas&quot;                                           
+## [24] &quot;Italie&quot;                                             
+## [25] &quot;Portugal&quot;                                           
+## [26] &quot;Roumanie&quot;                                           
+## [27] &quot;Norvège&quot;                                            
+## [28] &quot;Pologne&quot;                                            
+## [29] &quot;Suède&quot;                                              
+## [30] &quot;Slovaquie&quot;                                          
+## [31] &quot;Turquie&quot;                                            
+## [32] &quot;Royaume-Uni de Grande-Bretagne et d&#39;Irlande du Nord&quot;
+## [33] &quot;Slovénie&quot;</code></pre>
 </div>
 </div>
 

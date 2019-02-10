@@ -209,11 +209,40 @@ $(document).ready(function () {
 </div>
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>Presentation</p>
+<div id="schedule" class="section level1">
+<h1>Schedule</h1>
+<ul>
+<li>Monday 11/02
+<ul>
+<li>Intro-presentation.</li>
+<li>Examples [step 1, 2] getting maps &amp; adding data.</li>
+</ul></li>
+<li>Thursday 14/02
+<ul>
+<li>Short recapitulation intro-presentation.</li>
+<li>Examples [step 3, 4] manipulating data &amp; plotting.</li>
+<li>[depending on timing] Q&amp;A, own examples / data.</li>
+</ul></li>
+</ul>
+</div>
+<div id="intro-presentation" class="section level1">
+<h1>Intro-presentation</h1>
 <ol style="list-style-type: decimal">
-<li>(Dis)advantages of R (or, why )</li>
+<li>(Dis)advantages of R</li>
+<li>Why spatial datavis. in R is become increasingly interesting
+<ul>
+<li>tidyverse</li>
+<li>spatial features</li>
+<li>one workflow for spatial &amp; regular data</li>
+</ul></li>
+<li>Recommended packages for thematic maps
+<ul>
+<li>tmap</li>
+<li>ggplot / leaflet / mapview</li>
+<li>supporting packages</li>
+</ul></li>
+<li>Outline of worked examples / approach</li>
+<li>Expectations? Questions?</li>
 </ol>
 </div>
 <div id="setup" class="section level1">
@@ -223,14 +252,10 @@ $(document).ready(function () {
 <li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download</a> and install Rstudio.</li>
 <li>Run commands below to install required R-packages.</li>
 </ul>
-<pre class="r"><code>install.packages(c(&#39;eurostat&#39;, &#39;rworldmap&#39;, &#39;rgdal&#39;, &#39;sf&#39;, &#39;osmdata&#39;, &#39;tmap&#39;, &#39;tmaptools&#39;, &#39;eurostat&#39;))</code></pre>
+<pre class="r"><code>install.packages(c(&#39;eurostat&#39;, &#39;rworldmap&#39;, &#39;rgdal&#39;, &#39;sf&#39;, &#39;osmdata&#39;, &#39;tmap&#39;, &#39;tmaptools&#39;, &#39;countrycode&#39;, &#39;ggplot2&#39;))</code></pre>
 </div>
-<div id="preliminaries" class="section level1">
-<h1>Preliminaries</h1>
-<ul>
-<li>What are you looking at? Rmarkdown?</li>
-<li>R-syntax in a nutshell (enough to follow along)</li>
-</ul>
+<div id="r-syntax-in-a-nutshell-enough-to-follow-along" class="section level1">
+<h1>R-syntax in a nutshell (enough to follow along)</h1>
 <pre class="r"><code># Objects, functions, combinations of functions
 
 obj_a &lt;- something            # create/assign something to &quot;object A&quot;
