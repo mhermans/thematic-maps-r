@@ -1,0 +1,135 @@
+---
+title: "Tweak"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+**Two** types of data-manipulation: 
+
+1. spatial data-manipulations 
+2. 'regular' data-manipulations
+
+... but same syntax and in **one** dataframe.
+
+PS: always an option, do (2) in SAS, Stata, etc. before reading and joining data (previous step.
+
+```{r, message=FALSE, warning=FALSE}
+library(BelgiumMaps.StatBel)
+library(sf)
+library(tmap)
+library(dplyr)
+```
+
+
+# "Regular" data-manipulations
+
+proportion of unemployed instead of 
+
+# Spatial data-manipulations
+
+Already mentioned spatial **cropping**. Also potentially useful for thematic maps: spatial **union**, spatial **aggregation**. Further (complex) operations, depending on need.
+
+## Ex.: Crop provinces around Brussels Airport
+
+
+FYI, fancy example: crop map Dublin airport.
+
+
+## Ex.: Join Brussels to Flemish provinces
+
+```{r}
+data("BE_ADMIN_PROVINCE")
+prov <- st_as_sf(BE_ADMIN_PROVINCE)
+qtm(prov)
+```
+
+```{r}
+data("BE_ADMIN_REGION")
+region <- st_as_sf(BE_ADMIN_REGION)
+bxl <- region %>% filter(TX_RGN_DESCR_NL == "Brussels Hoofdstedelijk Gewest")
+qtm(bxl)
+```
+
+
+
+
+## Ex. Aggregate muncipalities to arrondissements
+
+
+```{r}
+# aggr <- muni %>%
+#   #group_by(TX_RGN_DESCR_NL, hoofdcluster_lbl) %>%
+#   group_by(hoofdcluster_lbl) %>%
+#   # filter(hoofdcluster_lbl == 'Sterk verstedelijkt') %>%
+#   tally()
+```
+
+
+```{r}
+# qtm(aggr, fill = 'hoofdcluster_lbl')
+```
+
+
+# EX. aggregate municipal income 
+
+
+
+# EX. heritage plans in Leuven
+
+
+```{r, message=FALSE}
+library(sf)
+library(tmap)
+library(tmaptools)  # provides bb() for bounding box
+library(rgdal)      # provides readOGR()
+library(mapview)
+```
+
+```{r}
+heritage <- st_as_sf(readOGR('data/heritage_plans/', layer = 'heritage_plans'))
+st_crs(heritage) <- 31370
+```
+
+```{r}
+# Get a bounding box around Leuven
+leuven_bb <- bb('Leuven', projection = '31370') # set projection to BE Lambert 72 https://epsg.io/31370
+leuven_bb
+```
+
+```{r}
+#quick thematic map with a bounding box around Leuven
+#qtm(heritage) # compare full map
+#qtm(heritage, bbox = 'Leuven')
+
+qtm(heritage, bbox = leuven_bb)
+```
+
+```{r}
+heritage_leuven <- crop_shape(heritage, leuven_bb)
+heritage_leuven
+```
+
+
+```{r}
+mapview(heritage_leuven)
+```
+
+
+```{r}
+qtm(heritage_leuven)
+```
+
+```{r}
+library(dplyr)
+library(stringr)
+
+heritage_leuven <- heritage_leuven %>%
+  mutate(start_year = str_sub(STARTDATUM, start = 1, end = 4))
+```
+
+
+```{r}
+qtm(heritage_leuven, fill = 'start_year')
+```

@@ -1,6 +1,0 @@
----
-title: "Show & tell: thematic maps with R"
----
-
-
-Hello, Website!

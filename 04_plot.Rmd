@@ -1,0 +1,328 @@
+---
+title: "Tweak"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+Recommended packages:
+
+* [mapview](https://r-spatial.github.io/mapview/): quick, single-function to interactively view spatial data(frames).
+* [leaflet](https://rstudio.github.io/leaflet/): flexible, general purpose package for interactive maps.
+* [ggplot](https://ggplot2.tidyverse.org/): most popular package for datavis in R, recent and growing support for maps.
+* [tmap](https://github.com/mtennekes/tmap#tmap-thematic-maps-in-r): special-purpose package for *t*hematic *map*s in R. [focus]
+
+Learn more:
+
+* Stackoverflow
+* Documentation tmap
+* Datacamp courses
+* Online books, https://geocompr.robinlovelace.net/adv-map.html
+* Offline books
+
+
+
+```{r, message=FALSE, warning=FALSE}
+library(BelgiumMaps.StatBel)
+library(mapview)
+library(sf)
+library(tmap)
+library(readr)
+library(dplyr)
+library(ggplot2)
+```
+
+
+
+
+# Themaric maps with tmap
+
+In an nutshell:
+
+* **Q**uick **t**hematic **m**ap: `qtm()`
+* Build map in layers with lots of control and options: `tm_shape()`, `tm_fill()`, `tm_borders()`, etc.
+* Cherry-on-top: switch between interactive and static plotting with `tmap_mode('view')` and `tmap_mode('plot')`.
+
+
+* [Getting started with tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html)
+* https://geocompr.robinlovelace.net/adv-map.html
+* Background and walkthrough: [Tennekes, M., 2018, tmap: Thematic Maps in R, Journal of Statistical Software, 84(6), 1-39](https://www.jstatsoft.org/article/view/v084i06).
+
+Already showed some examples, here extra focus on:
+
+* Color scales
+* Multiple (styled) borders
+* Multiple maps
+
+Tip: for _final_ tweaks, save map as SVG in [Inkscape](https://inkscape.org/).
+
+
+```{r}
+# load boundary for entire BE
+data("BE_ADMIN_BELGIUM")
+be <- st_as_sf(BE_ADMIN_BELGIUM)
+
+# load municipal boundaries
+data("BE_ADMIN_MUNTY")
+munip_map <- st_as_sf(BE_ADMIN_MUNTY)
+
+# load fiscal income data on municipal level
+munip_data <- read_csv(
+  file = 'data/fiscal_incomes_2016.csv', 
+  col_types = cols(
+    munip_label = col_character(),
+    munip_nis = col_character(),
+    n_inhabitants = col_integer(),
+    income_mean = col_integer() ))
+
+# add map and income data together on muncipal level
+munip <- left_join(
+  munip_map, munip_data, 
+  by = c('CD_MUNTY_REFNIS' = 'munip_nis'))
+```
+
+
+## Building maps in layers
+
+```{r}
+tm_shape(munip) +
+  tm_borders()
+```
+
+```{r}
+tm_shape(munip) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)')
+```
+
+```{r}
+tm_shape(munip) +
+  tm_borders() +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)')
+```
+
+```{r}
+tm_shape(munip) +
+  tm_borders(col = 'white', lwd = 0.3) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)')
+```
+
+```{r}
+tm_shape(munip) +
+  tm_borders(col = 'white', lwd = 0.3) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)', legend.hist = TRUE) +
+  tm_legend(legend.outside = TRUE)
+```
+
+```{r}
+ tm_shape(munip) +
+  tm_borders(col = 'white', lwd = 0.3) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)', legend.hist = TRUE) +
+  tm_legend(legend.outside = TRUE) +
+  tm_layout(frame = FALSE) +
+  tm_credits('Source: Statbel, Fiscale statistiek van de inkomsten 2005-2016', position = 'left')
+```
+
+```{r, message=FALSE, warning=FALSE}
+ tm_shape(munip) +
+  tm_borders(col = 'white', lwd = 0.3) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)', legend.hist = FALSE) +
+  tm_legend(legend.outside = FALSE) +
+  tm_layout(frame = FALSE) +
+  tm_credits('Source: Statbel, Fiscale statistiek van de\ninkomsten 2005-2016', position = 'center') +
+  tm_style_grey(legend.format = list(text.separator= "-")) + 
+  tm_logo("data/hiva_logo_400x400.png")
+```
+
+## Add layers using objects
+
+```{r}
+be_income <- tm_shape(munip) +
+  tm_borders(col = 'white', lwd = 0.3) +
+  tm_fill(col = 'income_mean', title = 'Mean income (2016)', legend.hist = FALSE) +
+  tm_legend(legend.outside = FALSE)
+
+be_income
+```
+
+```{r}
+be_income_style <- be_income +
+  tm_layout(frame = FALSE) +
+  tm_credits('Source: Statbel, Fiscale statistiek van de\ninkomsten 2005-2016', position = 'center') +
+  tm_style_grey(legend.format = list(text.separator= "-")) + 
+  tm_logo("data/hiva_logo_400x400.png", height = 2) +     # scale down logo size a bit
+  tm_layout(scale = 0.8)                                  # reduce over text-size
+
+be_income_style
+```
+
+
+```{r}
+save_tmap(be_income_style, 'output/be_income_muni_2016.png', width = 1920, height = 1080)
+```
+
+
+# Styled (multiple) borders
+
+```{r}
+data("BE_ADMIN_PROVINCE")
+prov <- st_as_sf(BE_ADMIN_PROVINCE)
+```
+
+
+```{r}
+be_income_prov <- be_income +
+  tm_shape(prov) +
+  tm_borders(col = 'black', lwd = .2)
+
+be_income_prov
+```
+
+## Binning and color palettes
+
+
+Continuous, sequential, diverging.
+
+```{r}
+min(munip$income_mean)
+max(munip$income_mean)
+```
+
+
+```{r}
+tm_shape(munip) +
+  tm_fill(col = 'income_mean', 
+          title = 'Mean income (2016)',
+          breaks = c(0, 20000, 25000, 30000)) +
+  tm_borders(col = 'white', lwd = .5)
+```
+
+
+
+```{r}
+tm_shape(munip) +
+  tm_fill(col = 'income_mean', 
+          title = 'Mean income (2016)',
+          n=20, # detailed breaks!
+          legend.hist = TRUE) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_legend(legend.outside = TRUE, legend.outside.position="right")
+```
+
+```{r}
+be_income_div <- tm_shape(munip) +
+  tm_fill(col = 'income_mean', 
+          title = 'Mean income (2016)',
+          n = 20,  
+          palette = "RdBu", auto.palette.mapping = FALSE, # diverging pallette!
+    legend.hist = TRUE) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_legend(legend.outside = TRUE, legend.outside.position="right") +
+  tm_shape(be) +
+  tm_borders(col = 'black', lwd = 0.3) +
+  tm_layout(frame = FALSE)
+
+be_income_div
+```
+
+
+
+# Multiple maps / facets
+
+https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html#facets
+
+
+```{r}
+tm_shape(munip) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_fill(col = c("income_mean", 'n_inhabitants')) +
+  tm_layout(legend.position = c('left', 'bottom'))
+```
+
+
+```{r}
+m_be_income <- tm_shape(munip) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_fill(col = "income_mean", title = 'Mean income (2016)')
+
+m_be_pop <- tm_shape(munip) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_fill(col = "n_inhabitants", title = "Population (2010)")
+
+tmap_arrange(m_be_income, m_be_pop)
+```
+
+
+## tmap interactive mode
+
+```{r, message=FALSE, warning=FALSE}
+tmap_mode('view')
+be_income_div
+tmap_mode('plot')
+```
+
+
+
+# ggplot with geom_sf()
+
+```{r, message=FALSE, warning=FALSE}
+library(eurostat)
+worktime_data <- get_eurostat('lfsi_pt_a') %>%
+  filter(age == 'Y20-64', 
+         worktime == 'TEMP', 
+         sex %in% c('M', 'F'), 
+         time == '2017-01-01', 
+         unit == 'PC_EMP')
+
+map_data <- get_eurostat_geospatial(
+  resolution = "60", # detail 
+  nuts_level = "0") # NUTS 0-3
+map_data <- st_crop(map_data, c(xmin=-10, xmax=45, ymin=36, ymax=71))
+
+worktime <- left_join(map_data, worktime_data, by = c('CNTR_CODE' = 'geo')) %>%
+  filter(!is.na(sex))
+```
+
+```{r, message=FALSE, warning=FALSE}
+ggplot(worktime) +
+  geom_point(aes(x = values, y = id, color = sex)) +
+  facet_grid(~sex)
+```
+
+
+```{r}
+p_eu_worktime <- ggplot(worktime) +
+  geom_sf(aes(fill = values)) +
+  facet_grid(~sex)
+
+p_eu_worktime
+```
+
+```{r}
+ggsave('output/eu_worktime_gender.png', p_eu_worktime, width = 12, height = 8)
+```
+
+
+
+# Interactive maps with leaflet 
+
+https://rstudio.github.io/leaflet/choropleths.html
+
+saving leaflet 
+
+```{r, warning=FALSE, message=FALSE}
+library(leaflet)
+
+bins <- c(0, 5, 10, 15, 20, 25, 30)
+pal <- colorBin("YlOrRd", domain = worktime$values, bins = bins)
+
+leaflet(worktime %>% filter(sex == 'F')) %>%
+  addTiles() %>%
+  addPolygons(fillColor = ~pal(values), color = "black", weight = 1, opacity = 1)
+```
+
+* Unemployment dynam-project HVIA-site
+* statistical sectors
+* Example VDAB-offices
+* Historical maps
+* 

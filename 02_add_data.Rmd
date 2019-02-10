@@ -1,0 +1,126 @@
+---
+title: "Adding data"
+output: 
+    html_document:
+      df_print: tibble
+      toc: yes
+      toc_float: yes
+---
+
+We have a (spatial) dataframe with the blank map-information, now we want to add our data-of-interest. Two steps:
+
+1. Read in data-of-interst into R.
+2. Join data-of-interest with the spatial dataframe.
+
+
+```{r}
+library(BelgiumMaps.StatBel)
+library(tmap)
+library(tmaptools)
+library(dplyr)
+library(readr)
+library(readxl)
+library(haven)
+```
+
+# Read in data-of-interest
+
+Crucial: have a variable/column in your that contains the appropriate spatial identifier. E.g. NIS-code, NUTS-code, etc.
+
+How to read in your data depends on the format, three recommended R-packages should cover mosts posibilities: 
+
+* [readr](https://readr.tidyverse.org/): read/write plain text formats such as CSV, TXT, etc.
+* [readxl](https://readxl.tidyverse.org/): read in Excel-files (.xlsx, .xls).
+* [haven](https://haven.tidyverse.org/): read/write datasets from SAS, SPSS, Stata.
+
+```{r}
+# read in employment/unemployment numbers
+
+# CSV
+data_muni <- read_csv('data/muni_typology.csv', col_types = cols(.default = col_character()))
+
+# Excel
+
+
+# SAS
+
+
+# Stata
+
+
+```
+
+
+
+# Join spatial data and data-of interest 
+
+Recommended options:
+
+1. general dataframe-join functions from dplyr: `left_join()`.
+2. map-specific helper function from tmaptools: ``.
+
+```{r, eval=FALSE}
+# option 1 (dplyr): 
+data = left_join(map_data, data_of_interest, by = "identifier")
+data = left_join(map_data, data_of_interest, by = c("map_identifier" = "data_identifier"))
+```
+
+```{r, eval = FALSE}
+# option 2 (maptools):
+
+```
+
+# Examples
+
+## EX. Municipal socio-economic typology
+
+```{r}
+data("BE_ADMIN_MUNTY")
+map_muni <- st_as_sf(BE_ADMIN_MUNTY)
+data_muni <- read_csv('data/muni_typology.csv', col_types = cols(.default = col_character()))
+muni <- left_join(map_muni, data_muni, by = c('CD_MUNTY_REFNIS' = 'gemeente_nis_code'))
+```
+
+```{r}
+qtm(muni, fill = 'hoofdcluster_lbl')
+```
+
+## EX. Percentage of part-time workers in EU-countries
+
+```{r, message=FALSE, warning=FALSE}
+library(eurostat)
+worktime_data <- get_eurostat('lfsi_pt_a') %>%
+  filter(age == 'Y20-64', 
+         worktime == 'TEMP', 
+         sex == 'T', 
+         time == '2017-01-01', 
+         unit == 'PC_EMP')
+
+# alternative, load saved eurostat-data:
+#XXXX
+#XXXX
+#XXXX
+#XXXX
+```
+
+```{r, message=FALSE, warning=FALSE}
+map_data <- get_eurostat_geospatial(
+  resolution = "60", # detail 
+  nuts_level = "0") # NUTS 0-3
+
+map_data <- st_crop(map_data, c(xmin=-10, xmax=45, ymin=36, ymax=71))
+```
+
+```{r, message=FALSE, warning=FALSE}
+worktime <- left_join(map_data, worktime_data, by = c('CNTR_CODE' = 'geo'))
+```
+
+```{r}
+qtm(worktime, fill = 'values', fill.title = 'Percentage part-time')
+```
+
+
+```{r}
+# countrycode
+```
+

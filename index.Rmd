@@ -1,5 +1,45 @@
 ---
-title: "My Website"
+title: "Show & tell: thematic maps with R"
 ---
 
-Hello, Website!
+# Introduction
+
+Presentation
+
+1. (Dis)advantages of R (or, why )
+
+
+# Setup
+
+* [Download](https://cran.r-project.org/bin/windows/base/) and install R.
+* [Download](https://www.rstudio.com/products/rstudio/download/#download) and install Rstudio.
+* Run commands below to install required R-packages.
+
+```{r, eval=FALSE}
+install.packages(c('eurostat', 'rworldmap', 'rgdal', 'sf', 'osmdata', 'tmap', 'tmaptools', 'eurostat'))
+```
+
+# Preliminaries 
+
+* What are you looking at? Rmarkdown?
+* R-syntax in a nutshell (enough to follow along)
+
+```{r, eval=FALSE}
+# Objects, functions, combinations of functions
+
+obj_a <- something            # create/assign something to "object A"
+obj_a                         # show object A
+
+obj_b <- do_something(obj_a)  # change object A, creating object B (function)
+ 
+# %>% "pipe" object A through multiple functions, resulting in object B
+obj_b <- obj_a %>%
+  do_something() %>%
+  do_something_else() %>%
+  do_another_thing()
+
+# + add things to object A, resulting in object B
+obj_b <- obj_a +
+  add_something() +
+  add_something()
+```

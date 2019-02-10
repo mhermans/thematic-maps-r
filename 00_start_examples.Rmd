@@ -1,0 +1,43 @@
+---
+title: "What we will be working towards"
+output: 
+    html_document:
+      number_sections: yes
+      toc: yes
+      toc_float: yes
+---
+
+Illustrating common steps for common thematic maps:
+
+1. Get an appropriate blank map.
+1. Load and add "regular" data.
+3. Manipulate (spatial) data.
+4. Plot map.
+5. Tweak map.
+6. Export map.
+
+# Full examples
+
+```{r, echo=FALSE}
+#library()
+```
+
+
+```{r}
+# example BE static
+#data(BE)
+#save_tmap()
+```
+
+```{r}
+# example EU static
+```
+
+```{r}
+# example BE interactive
+```
+
+```{r}
+# example BE interactive
+```
+
