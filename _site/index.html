@@ -11,7 +11,7 @@
 
 
 
-<title>My Website</title>
+<title>Show &amp; tell: thematic maps with R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,9 +89,6 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -181,25 +178,19 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="00_introduction.html">0. Introduction</a>
+  <a href="00_start_examples.html">Intro</a>
 </li>
 <li>
-  <a href="01_reading_data.html">1. Reading data</a>
+  <a href="01_get_maps.html">1. Get maps</a>
 </li>
 <li>
-  <a href="02_joining_data.html">2. Joining data</a>
+  <a href="02_add_data.html">2. Add data</a>
 </li>
 <li>
-  <a href="03_manipulating_data.html">3. Manipulating data</a>
+  <a href="03_manipulate.html">3. Manipulate</a>
 </li>
 <li>
-  <a href="04_plotting_maps.html">4. Plotting maps</a>
-</li>
-<li>
-  <a href="05_tweaking_maps.html">5. Tweaking maps</a>
-</li>
-<li>
-  <a href="06_exporting_maps.html">6. Exporting maps</a>
+  <a href="04_plot.html">4. Plot</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -213,12 +204,51 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
+<h1 class="title toc-ignore">Show &amp; tell: thematic maps with R</h1>
 
 </div>
 
 
-<p>Hello, Website!</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Presentation</p>
+<ol style="list-style-type: decimal">
+<li>(Dis)advantages of R (or, why )</li>
+</ol>
+</div>
+<div id="setup" class="section level1">
+<h1>Setup</h1>
+<ul>
+<li><a href="https://cran.r-project.org/bin/windows/base/">Download</a> and install R.</li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download</a> and install Rstudio.</li>
+<li>Run commands below to install required R-packages.</li>
+</ul>
+<pre class="r"><code>install.packages(c(&#39;eurostat&#39;, &#39;rworldmap&#39;, &#39;rgdal&#39;, &#39;sf&#39;, &#39;osmdata&#39;, &#39;tmap&#39;, &#39;tmaptools&#39;, &#39;eurostat&#39;))</code></pre>
+</div>
+<div id="preliminaries" class="section level1">
+<h1>Preliminaries</h1>
+<ul>
+<li>What are you looking at? Rmarkdown?</li>
+<li>R-syntax in a nutshell (enough to follow along)</li>
+</ul>
+<pre class="r"><code># Objects, functions, combinations of functions
+
+obj_a &lt;- something            # create/assign something to &quot;object A&quot;
+obj_a                         # show object A
+
+obj_b &lt;- do_something(obj_a)  # change object A, creating object B (function)
+ 
+# %&gt;% &quot;pipe&quot; object A through multiple functions, resulting in object B
+obj_b &lt;- obj_a %&gt;%
+  do_something() %&gt;%
+  do_something_else() %&gt;%
+  do_another_thing()
+
+# + add things to object A, resulting in object B
+obj_b &lt;- obj_a +
+  add_something() +
+  add_something()</code></pre>
+</div>
 
 
 
