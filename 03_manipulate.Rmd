@@ -1,135 +1,179 @@
 ---
-title: "Tweak"
+title: "Manipulating (spatial) data"
 output: 
     html_document:
         toc: TRUE
         toc_float: TRUE
 ---
 
-**Two** types of data-manipulation: 
+Two types of data-manipulation: 
 
-1. spatial data-manipulations 
-2. 'regular' data-manipulations
+1. spatial data-manipulations: spatial cropping, union, aggregation, etc.
+2. 'regular' data-manipulations: combine categories, calculate percentage of population, etc.
 
 ... but same syntax and in **one** dataframe.
 
-PS: always an option, do (2) in SAS, Stata, etc. before reading and joining data (previous step.
+PS: always an option, do (2) in SAS, Stata, etc. before reading and joining data (previous step).
 
 ```{r, message=FALSE, warning=FALSE}
+library(rgdal)      # provides readOGR() to read in spatial data
 library(BelgiumMaps.StatBel)
 library(sf)
-library(tmap)
-library(dplyr)
+library(tmap)       # plot thematic map with qtm()
+library(dplyr)      # general data-manipulation
+library(stringr)    # string-operations str_sub()
 ```
 
 
-# "Regular" data-manipulations
-
-proportion of unemployed instead of 
-
-# Spatial data-manipulations
-
-Already mentioned spatial **cropping**. Also potentially useful for thematic maps: spatial **union**, spatial **aggregation**. Further (complex) operations, depending on need.
-
-## Ex.: Crop provinces around Brussels Airport
-
-
-FYI, fancy example: crop map Dublin airport.
-
-
-## Ex.: Join Brussels to Flemish provinces
+# Ex. Select specific provinces
 
 ```{r}
-data("BE_ADMIN_PROVINCE")
-prov <- st_as_sf(BE_ADMIN_PROVINCE)
-qtm(prov)
+data("BE_ADMIN_MUNTY")
+map_muni <- st_as_sf(BE_ADMIN_MUNTY)
+data_muni <- read_csv('data/muni_typology.csv', col_types = cols(.default = col_character()))
+muni <- left_join(map_muni, data_muni, by = c('CD_MUNTY_REFNIS' = 'gemeente_nis_code'))
 ```
 
 ```{r}
-data("BE_ADMIN_REGION")
-region <- st_as_sf(BE_ADMIN_REGION)
-bxl <- region %>% filter(TX_RGN_DESCR_NL == "Brussels Hoofdstedelijk Gewest")
-qtm(bxl)
+antw_luik <- muni %>%
+  filter(TX_PROV_DESCR_NL %in% c('Provincie Antwerpen', 'Provincie Luik'))
+
+qtm(antw_luik, fill = 'hoofdcluster_lbl', fill.title = 'Socio-economic cluster')
 ```
 
 
-
-
-## Ex. Aggregate muncipalities to arrondissements
-
+# Ex. Spatial aggregation 
 
 ```{r}
-# aggr <- muni %>%
-#   #group_by(TX_RGN_DESCR_NL, hoofdcluster_lbl) %>%
-#   group_by(hoofdcluster_lbl) %>%
-#   # filter(hoofdcluster_lbl == 'Sterk verstedelijkt') %>%
-#   tally()
+qtm(muni, fill = 'hoofdcluster_lbl', fill.title = 'Socio-economic cluster')
+```
+
+```{r}
+muni_clusterd <- muni %>%
+  group_by(hoofdcluster_lbl) %>%
+  tally()
 ```
 
 
 ```{r}
-# qtm(aggr, fill = 'hoofdcluster_lbl')
+qtm(muni_clusterd, fill = 'hoofdcluster_lbl', fill.title = 'Socio-economic cluster')
 ```
 
+# Ex. Covert muncipal income in PPP
 
-# EX. aggregate municipal income 
+```{r}
+# load municipal boundaries
+data("BE_ADMIN_MUNTY")
+munip_map <- st_as_sf(BE_ADMIN_MUNTY)
 
+# load fiscal income data on municipal level
+munip_data <- read_csv(
+  file = 'data/fiscal_incomes_2016.csv', 
+  col_types = cols(
+    munip_label = col_character(),
+    munip_nis = col_character(),
+    n_inhabitants = col_integer(),
+    income_mean = col_integer() ))
 
-
-# EX. heritage plans in Leuven
-
-
-```{r, message=FALSE}
-library(sf)
-library(tmap)
-library(tmaptools)  # provides bb() for bounding box
-library(rgdal)      # provides readOGR()
-library(mapview)
+# add map and income data together on muncipal level
+munip <- left_join(
+  munip_map, munip_data, 
+  by = c('CD_MUNTY_REFNIS' = 'munip_nis'))
 ```
 
 ```{r}
-heritage <- st_as_sf(readOGR('data/heritage_plans/', layer = 'heritage_plans'))
-st_crs(heritage) <- 31370
+qtm(munip, fill = 'income_mean', fill.title = 'Mean income (2016)')
 ```
 
 ```{r}
-# Get a bounding box around Leuven
-leuven_bb <- bb('Leuven', projection = '31370') # set projection to BE Lambert 72 https://epsg.io/31370
-leuven_bb
+# Convert to Purchasing Power Parity (new variable "income_mean_ppp")
+# 2016 Euro-PPP for BE https://data.oecd.org/conversion/purchasing-power-parities-ppp.htm 
+
+munip <- munip %>%
+  mutate(income_mean_ppp = income_mean * 0.794)
 ```
 
 ```{r}
-#quick thematic map with a bounding box around Leuven
-#qtm(heritage) # compare full map
-#qtm(heritage, bbox = 'Leuven')
-
-qtm(heritage, bbox = leuven_bb)
+qtm(munip, fill = 'income_mean_ppp', fill.title = 'Mean income (2016, PPP)')
 ```
 
-```{r}
-heritage_leuven <- crop_shape(heritage, leuven_bb)
-heritage_leuven
-```
-
+# Ex. Calculate, filter and plot on quantiles
 
 ```{r}
-mapview(heritage_leuven)
-```
-
-
-```{r}
-qtm(heritage_leuven)
-```
-
-```{r}
-library(dplyr)
-library(stringr)
-
-heritage_leuven <- heritage_leuven %>%
-  mutate(start_year = str_sub(STARTDATUM, start = 1, end = 4))
+# base R function to calculate quantiles (here quartile)
+income_quartiles <- quantile(munip$income_mean)
+income_quartiles
 ```
 
 
 ```{r}
-qtm(heritage_leuven, fill = 'start_year')
+# make new variable, classifying muncicipalities by mean income quartile ("income_quartile")
+munip <- munip %>% 
+  mutate(income_quartile = cut(income_mean, income_quartiles, labels = c('0-25%', '26-50%', '51-75%', '76-100%')))
 ```
+
+```{r}
+qtm(munip, fill = 'income_quartile', fill.palette = '-Reds', 
+    fill.title = 'Mean income quartiles (2016)')
+```
+
+```{r}
+# Select only the muncipalities in the bottom quartile (0-25%)
+munip_min25 <- munip %>%
+  filter(income_quartile == '0-25%')
+
+qtm(munip_min25, fill = 'income_mean', fill.palette = '-Reds', 
+    fill.title = 'Mean municipal income in\nbottom quartile (2016)')
+```
+
+
+# Ex. Aggregate municipal income to district-level
+
+```{r}
+# aggregate spatially _and_ data-wise (take mean of income)
+munip_district <- munip %>%
+  group_by(TX_ADM_DSTR_DESCR_NL) %>%
+  summarise(
+    income_mean_aggr = mean(income_mean),
+    income_mean_ppp_aggr = mean(income_mean_ppp))
+```
+
+```{r}
+qtm(munip_district, fill = 'income_mean_ppp_aggr', fill.title = 'Mean income (2016, PPP)')
+```
+
+
+
+# Ex. Immovable Heritage plans
+
+
+```{r}
+# load spatial boundaries with readOGR()
+heritage <- readOGR('data/heritage_plans/', layer = 'heritage_plans')
+heritage <- st_as_sf(heritage)
+```
+
+
+```{r}
+# Manipulate: get the start year of the heritage mgmt plan
+#  using dplyr and str_sub() from stringr
+
+heritage <- heritage %>%
+  # get year substring (1st to 4th character) and create variable "start_year"
+  mutate(start_year = str_sub(STARTDATUM, start = 1, end = 4)) 
+```
+
+```{r}
+# quick thematic map, with color based on start-year, in sequential gradient of blues
+heritage_year <- qtm(heritage, fill = 'start_year', fill.palette = 'Blues')
+
+heritage_year
+```
+
+```{r, message=FALSE, warning=FALSE}
+# plot thematic map again, but in tmap interactive mode
+tmap_mode('view')
+heritage_year
+tmap_mode('plot')
+```
+

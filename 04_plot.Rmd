@@ -1,5 +1,5 @@
 ---
-title: "Tweak"
+title: "Plotting maps"
 output: 
     html_document:
         toc: TRUE
@@ -8,19 +8,17 @@ output:
 
 Recommended packages:
 
-* [mapview](https://r-spatial.github.io/mapview/): quick, single-function to interactively view spatial data(frames).
-* [leaflet](https://rstudio.github.io/leaflet/): flexible, general purpose package for interactive maps.
+* [tmap](https://github.com/mtennekes/tmap#tmap-thematic-maps-in-r): special-purpose package for *t*hematic *map*s in R. [**focus**]
 * [ggplot](https://ggplot2.tidyverse.org/): most popular package for datavis in R, recent and growing support for maps.
-* [tmap](https://github.com/mtennekes/tmap#tmap-thematic-maps-in-r): special-purpose package for *t*hematic *map*s in R. [focus]
+* [leaflet](https://rstudio.github.io/leaflet/): flexible, general purpose package for interactive maps.
+* [mapview](https://r-spatial.github.io/mapview/): quick, single-function to interactively view spatial data(frames).
 
 Learn more:
 
-* Stackoverflow
-* Documentation tmap
-* Datacamp courses
-* Online books, https://geocompr.robinlovelace.net/adv-map.html
-* Offline books
-
+* [Stackoverflow](https://stackoverflow.com).
+* Documentation tmap (F1).
+* Books: "[An Introduction to R for Spatial Analysis and Mapping](https://books.google.be/books?id=iwJ6DwAAQBAJ) (2018)", "[Geocomputation with R](https://geocompr.robinlovelace.net/]) (full-text)", "[Data Visualization. A practical introduction](https://socviz.co/)" (full text).
+* [Datacamp courses](https://www.datacamp.com/).
 
 
 ```{r, message=FALSE, warning=FALSE}
@@ -34,8 +32,6 @@ library(ggplot2)
 ```
 
 
-
-
 # Themaric maps with tmap
 
 In an nutshell:
@@ -44,6 +40,7 @@ In an nutshell:
 * Build map in layers with lots of control and options: `tm_shape()`, `tm_fill()`, `tm_borders()`, etc.
 * Cherry-on-top: switch between interactive and static plotting with `tmap_mode('view')` and `tmap_mode('plot')`.
 
+Some resources:
 
 * [Getting started with tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html)
 * https://geocompr.robinlovelace.net/adv-map.html
@@ -51,7 +48,8 @@ In an nutshell:
 
 Already showed some examples, here extra focus on:
 
-* Color scales
+* "Layered" building of maps.
+* Binning and color scales
 * Multiple (styled) borders
 * Multiple maps
 
@@ -180,8 +178,8 @@ be_income_prov
 
 ## Binning and color palettes
 
-
-Continuous, sequential, diverging.
+* Choice of binning intervals matters.
+* Choise of color palette matters, cf. [colorbrewer](http://colorbrewer2.org): sequential, diverging, and qualitative color palettes.
 
 ```{r}
 min(munip$income_mean)
@@ -229,8 +227,7 @@ be_income_div
 
 # Multiple maps / facets
 
-https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html#facets
-
+Facets: more info in [getting started document](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html#facets) online.
 
 ```{r}
 tm_shape(munip) +
@@ -264,6 +261,8 @@ tmap_mode('plot')
 
 
 # ggplot with geom_sf()
+
+See chapter 7 of "[Data Visualisation. A Practical Introduction](http://socviz.co/maps.html#maps)".
 
 ```{r, message=FALSE, warning=FALSE}
 library(eurostat)
@@ -306,9 +305,7 @@ ggsave('output/eu_worktime_gender.png', p_eu_worktime, width = 12, height = 8)
 
 # Interactive maps with leaflet 
 
-https://rstudio.github.io/leaflet/choropleths.html
-
-saving leaflet 
+Good [intro online](https://rstudio.github.io/leaflet/choropleths.html).
 
 ```{r, warning=FALSE, message=FALSE}
 library(leaflet)
@@ -316,13 +313,23 @@ library(leaflet)
 bins <- c(0, 5, 10, 15, 20, 25, 30)
 pal <- colorBin("YlOrRd", domain = worktime$values, bins = bins)
 
-leaflet(worktime %>% filter(sex == 'F')) %>%
+eu_worktime_leaflet <- leaflet(worktime %>% filter(sex == 'F')) %>%
   addTiles() %>%
   addPolygons(fillColor = ~pal(values), color = "black", weight = 1, opacity = 1)
+
+eu_worktime_leaflet
 ```
 
-* Unemployment dynam-project HVIA-site
-* statistical sectors
-* Example VDAB-offices
-* Historical maps
-* 
+**Tip**: use `saveWidget()` from library [htmlwidgets](https://www.rdocumentation.org/packages/htmlwidgets/versions/1.3/topics/saveWidget) to save a (standalone) interactive map.
+
+```{r, eval=FALSE}
+library(htmlwidgets)
+saveWidget(eu_worktime_leaflet, 'output/eu_worktime_leaflet.html', selfcontained = TRUE)
+```
+
+Leaflet is quite flexible, some further examples:
+
+* [Interactive map in press-release](https://hiva.kuleuven.be/nl/nieuws/nieuwsitems/bruto-jobtoename-en-afname-in-beeld-voor-de-Belgische-regios-en-provincies) on unemployment-numbers HVIA-website.
+* Quick [example showing sampling in statistical sectors](https://mhermans.net/files/tmp/map_sectoren_basic.html) for project-meeting.
+* [Icons on a thematic map](https://rawgit.com/mhermans/rgeonotebooks/master/vdab_api_popup_map/vdab_api_popup_map.nb.html) (example with VDAB-offices).
+* Plotting on [interactive historical maps](https://mhermans.net/post/mapping-leuvense-gangen/).

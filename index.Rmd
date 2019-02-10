@@ -2,12 +2,29 @@
 title: "Show & tell: thematic maps with R"
 ---
 
-# Introduction
+# Schedule
 
-Presentation
+* Monday 11/02
+    - Intro-presentation.
+    - Examples [step 1, 2] getting maps & adding data.
+* Thursday 14/02
+    - Short recapitulation intro-presentation.
+    - Examples [step 3, 4] manipulating data & plotting.
+    - [depending on timing] Q&A, own examples / data.
 
-1. (Dis)advantages of R (or, why )
+# Intro-presentation
 
+1. (Dis)advantages of R
+2. Why spatial datavis. in R is become increasingly interesting
+    - tidyverse
+    - spatial features
+    - one workflow for spatial & regular data
+3. Recommended packages for thematic maps
+    - tmap
+    - ggplot / leaflet / mapview
+    - supporting packages
+4. Outline of worked examples / approach
+5. Expectations? Questions?
 
 # Setup
 
@@ -16,13 +33,10 @@ Presentation
 * Run commands below to install required R-packages.
 
 ```{r, eval=FALSE}
-install.packages(c('eurostat', 'rworldmap', 'rgdal', 'sf', 'osmdata', 'tmap', 'tmaptools', 'eurostat'))
+install.packages(c('eurostat', 'rworldmap', 'rgdal', 'sf', 'osmdata', 'tmap', 'tmaptools', 'countrycode', 'ggplot2'))
 ```
 
-# Preliminaries 
-
-* What are you looking at? Rmarkdown?
-* R-syntax in a nutshell (enough to follow along)
+# R-syntax in a nutshell (enough to follow along)
 
 ```{r, eval=FALSE}
 # Objects, functions, combinations of functions

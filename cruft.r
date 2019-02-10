@@ -272,3 +272,29 @@
 #   tm_borders(col = 'white', lwd = .7) + 
 #   tm_layout(frame = FALSE) +
 #   tm_style_white(legend.format = list(text.separator= "-"))
+
+#st_crs(heritage) <- 31370
+
+# ```{r}
+# # Get a bounding box around Leuven
+# # leuven_bb <- bb('Leuven', projection = '31370') # set projection to BE Lambert 72 https://epsg.io/31370
+# # leuven_bb
+# ```
+# 
+# ```{r}
+# #quick thematic map with a bounding box around Leuven
+# #qtm(heritage) # compare full map
+# #qtm(heritage, bbox = 'Leuven')
+# 
+# #qtm(heritage, bbox = leuven_bb)
+# ```
+# 
+# ```{r}
+# # heritage_leuven <- crop_shape(heritage, leuven_bb)
+# # heritage_leuven
+# ```
+# 
+# 
+# ```{r}
+# mapview(heritage)
+# ```

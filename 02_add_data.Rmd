@@ -17,6 +17,7 @@ We have a (spatial) dataframe with the blank map-information, now we want to add
 library(BelgiumMaps.StatBel)
 library(tmap)
 library(tmaptools)
+library(sf)
 library(dplyr)
 library(readr)
 library(readxl)
@@ -34,60 +35,71 @@ How to read in your data depends on the format, three recommended R-packages sho
 * [haven](https://haven.tidyverse.org/): read/write datasets from SAS, SPSS, Stata.
 
 ```{r}
-# read in employment/unemployment numbers
+# read in Belfius socio-economic municipality typology
+
+data_muni <- read_excel('data/muni_typology.xlsx')    # Excel
+data_muni <- read_sas('data/muni_typology.sas7bdat')  # SAS
+data_muni <- read_dta('data/muni_typology.dta')       # Stata
+data_muni <- read_sav('data/muni_typology.sav')       # SPSS
 
 # CSV
-data_muni <- read_csv('data/muni_typology.csv', col_types = cols(.default = col_character()))
-
-# Excel
-
-
-# SAS
-
-
-# Stata
-
-
+data_muni <- read_csv( 
+  file = 'data/muni_typology.csv', 
+  col_types = cols(.default = col_character()))       # explicit: all strings
 ```
-
 
 
 # Join spatial data and data-of interest 
 
 Recommended options:
 
-1. general dataframe-join functions from dplyr: `left_join()`.
-2. map-specific helper function from tmaptools: ``.
+1. general dataframe-[join functions from dplyr](https://stat545.com/bit001_dplyr-cheatsheet.html): `left_join()`.
+2. map-specific [helper function from tmaptools](https://rdrr.io/cran/tmaptools/man/append_data.html): `append_data()`.
 
 ```{r, eval=FALSE}
 # option 1 (dplyr): 
-data = left_join(map_data, data_of_interest, by = "identifier")
-data = left_join(map_data, data_of_interest, by = c("map_identifier" = "data_identifier"))
+library(dplyr)
+data <- left_join(map_data, data_of_interest, by = "identifier")
+data <- left_join(map_data, data_of_interest, by = c("map_identifier" = "data_identifier"))
 ```
 
 ```{r, eval = FALSE}
 # option 2 (maptools):
-
+library(tmaptools)
+data <- append_data(map_data, data_of_interest, 
+                    key.shp = "map_identifier", key.data = "data_identifier")
 ```
 
 # Examples
 
-## EX. Municipal socio-economic typology
+## Ex. Municipal socio-economic typology
 
 ```{r}
+# load map data
 data("BE_ADMIN_MUNTY")
 map_muni <- st_as_sf(BE_ADMIN_MUNTY)
+
+# load data-of-interest
 data_muni <- read_csv('data/muni_typology.csv', col_types = cols(.default = col_character()))
+
+# join with left_join()
 muni <- left_join(map_muni, data_muni, by = c('CD_MUNTY_REFNIS' = 'gemeente_nis_code'))
 ```
 
 ```{r}
-qtm(muni, fill = 'hoofdcluster_lbl')
+qtm(muni, fill = 'hoofdcluster_lbl', fill.title = 'Socio-economic cluster')
 ```
 
-## EX. Percentage of part-time workers in EU-countries
+## Ex. Part-time workers in the EU
+
+```{r}
+# Read Eurostat data on percentage of part-time employment 
+worktime_data <- read_excel('data/eurostat_workingtime_2017.xlsx')
+```
+
 
 ```{r, message=FALSE, warning=FALSE}
+# alternatively, fetch this data directly:
 library(eurostat)
 worktime_data <- get_eurostat('lfsi_pt_a') %>%
   filter(age == 'Y20-64', 
@@ -95,23 +107,20 @@ worktime_data <- get_eurostat('lfsi_pt_a') %>%
          sex == 'T', 
          time == '2017-01-01', 
          unit == 'PC_EMP')
-
-# alternative, load saved eurostat-data:
-#XXXX
-#XXXX
-#XXXX
-#XXXX
 ```
 
 ```{r, message=FALSE, warning=FALSE}
+# load EU NUTS0 (country) map data directly from Eurostat
 map_data <- get_eurostat_geospatial(
   resolution = "60", # detail 
   nuts_level = "0") # NUTS 0-3
 
+# crop map data to "mainland" EU
 map_data <- st_crop(map_data, c(xmin=-10, xmax=45, ymin=36, ymax=71))
 ```
 
 ```{r, message=FALSE, warning=FALSE}
+# join map and workingtime data in one dataframe
 worktime <- left_join(map_data, worktime_data, by = c('CNTR_CODE' = 'geo'))
 ```
 
@@ -119,8 +128,11 @@ worktime <- left_join(map_data, worktime_data, by = c('CNTR_CODE' = 'geo'))
 qtm(worktime, fill = 'values', fill.title = 'Percentage part-time')
 ```
 
+**Tip**: Use the R [countrycode package](https://github.com/vincentarelbundock/countrycode#r-countrycode) to convert names, codes, etc. before merging. Contains 30+ different country coding schemes, and to 600+ variants of country names in different languages and formats.
 
 ```{r}
-# countrycode
+library(countrycode)
+countrycode(worktime$NUTS_ID, 'eurostat', 'ecb') # official ECB code
+countrycode(worktime$NUTS_ID, 'eurostat', 'un.name.fr') # full UN name in FR
 ```
 

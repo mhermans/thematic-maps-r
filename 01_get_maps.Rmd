@@ -78,7 +78,6 @@ Important: the data always contains a variable/column with the [NIS-code](https:
 library(BelgiumMaps.StatBel)
 data("BE_ADMIN_PROVINCE") # load spatial object for provincial level
 provinces <- st_as_sf(BE_ADMIN_PROVINCE) # convert to sf-object
-provinces
 ```
 
 
