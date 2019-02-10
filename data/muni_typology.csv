@@ -1,0 +1,590 @@
+gemeente_nis_code,cluster_code,gemeente_nis_lbl,hoofdgroep_cluster_lbl,cluster_lbl,hoofdcluster_code,hoofdcluster_lbl
+41002,V14,AALST                      ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+44001,V13,AALTER                     ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+24001,V5,AARSCHOT                   ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+11001,V10,AARTSELAAR                 ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23105,V2,AFFLIGEM                   ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+73001,V4,ALKEN                      ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+38002,V3,ALVERINGEM                 ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11002,V15,ANTWERPEN                  ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+34002,V4,ANZEGEM                    ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+37020,V3,ARDOOIE                    ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+13001,V12,ARENDONK                   ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+71002,V12,AS                         ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+43002,V3,ASSENEDE                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+34003,V6,AVELGEM                    ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+13002,V12,BAARLE HERTOG              ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+13003,V12,BALEN                      ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+31003,V3,BEERNEM                    ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+13004,V13,BEERSE                     ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+24007,V2,BEGIJNENDIJK               ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+24008,V9,BEKKEVOORT                 ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+71004,V7,BERINGEN                   ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+12002,V6,BERLAAR                    ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+42003,V6,BERLARE                    ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+24009,V1,BERTEM                     ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+23009,V9,BEVER                      ,Woongemeenten,In landelijke zones,HC2,Landelijk
+46003,V8,BEVEREN                    ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+24011,V1,BIERBEEK                   ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+73006,V12,BILZEN                     ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+31004,V16,BLANKENBERGE               ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+72003,V12,BOCHOLT                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+11004,V2,BOECHOUT                   ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+12005,V1,BONHEIDEN                  ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+11005,V7,BOOM                       ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+24014,V2,BOORTMEERBEEK              ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+73009,V9,BORGLOON                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+12007,V8,BORNEM                     ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+11007,V10,BORSBEEK                   ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+24016,V1,BOUTERSEM                  ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+45059,V6,BRAKEL                     ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+11008,V11,BRASSCHAAT                 ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+11009,V12,BRECHT                     ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+35002,V16,BREDENE                    ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+72004,V4,BREE                       ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+31005,V15,BRUGGE                     ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+42004,V2,BUGGENHOUT                 ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+31006,V3,DAMME                      ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+35029,V16,DE HAAN                    ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+38008,V16,DE PANNE                   ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+44012,V11,DE PINTE                   ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+34009,V3,DEERLIJK                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+44011,V13,DEINZE                     ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+41011,V6,DENDERLEEUW                ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+42006,V5,DENDERMONDE                ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+37002,V4,DENTERGEM                  ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+13006,V4,DESSEL                     ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+44013,V2,DESTELBERGEN               ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+71011,V12,DIEPENBEEK                 ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+24020,V5,DIEST                      ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+32003,V5,DIKSMUIDE                  ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+72041,V12,DILSEN-STOKKEM             ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+23098,V10,DROGENBOS                  ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+12009,V8,DUFFEL                     ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+11013,V10,EDEGEM                     ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+43005,V5,EEKLO                      ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+41082,V2,ERPE-MERE                  ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+11016,V12,ESSEN                      ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+44019,V7,EVERGEM                    ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+44020,V2,GAVERE                     ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+13008,V5,GEEL                       ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+24028,V9,GEETBETS                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+71016,V14,GENK                       ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+44021,V15,GENT                       ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+41018,V5,GERAARDSBERGEN             ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+71017,V9,GINGELOM                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+35005,V6,GISTEL                     ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+24137,V9,GLABBEEK                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+13010,V13,GROBBENDONK                ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+24033,V1,HAACHT                     ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+41024,V6,HAALTERT                   ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+71020,V4,HALEN                      ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+71069,V12,HAM                        ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+42008,V7,HAMME                      ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+72037,V4,HAMONT-ACHEL               ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+34013,V7,HARELBEKE                  ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+71022,V15,HASSELT                    ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+72038,V12,HECHTEL-EKSEL              ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+73022,V9,HEERS                      ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+12014,V7,HEIST-OP-DEN-BERG          ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+11018,V7,HEMIKSEM                   ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+24038,V1,HERENT                     ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+13011,V5,HERENTALS                  ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+13012,V12,HERENTHOUT                 ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+71024,V12,HERK-DE-STAD               ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+13013,V12,HERSELT                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+73028,V9,HERSTAPPE                  ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+41027,V6,HERZELE                    ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+71070,V7,HEUSDEN-ZOLDER             ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+33039,V3,HEUVELLAND                 ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+24041,V9,HOEGAARDEN                 ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+73032,V12,HOESELT                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+24043,V1,HOLSBEEK                   ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+36006,V4,HOOGLEDE                   ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+13014,V13,HOOGSTRATEN                ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+45062,V9,HOREBEKE                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+72039,V7,HOUTHALEN-HELCHTEREN       ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+32006,V3,HOUTHULST                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11021,V11,HOVE                       ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+24045,V1,HULDENBERG                 ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+13016,V12,HULSHOUT                   ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+35006,V3,ICHTEGEM                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+33011,V5,IEPER                      ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+36007,V3,INGELMUNSTER               ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+36008,V8,IZEGEM                     ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+31012,V2,JABBEKE                    ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+11022,V2,KALMTHOUT                  ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+11023,V11,KAPELLEN                   ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+43007,V3,KAPRIJKE                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+13017,V12,KASTERLEE                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+24048,V1,KEERBERGEN                 ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+72018,V12,KINROOI                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+45060,V4,KLUISBERGEN                ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+44029,V3,KNESSELARE                 ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+31043,V16,KNOKKE-HEIST               ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+32010,V3,KOEKELARE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+38014,V16,KOKSIJDE                   ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+11024,V10,KONTICH                    ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+32011,V3,KORTEMARK                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+24054,V9,KORTENAKEN                 ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+24055,V1,KORTENBERG                 ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+73040,V12,KORTESSEM                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+34022,V14,KORTRIJK                   ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+23099,V11,KRAAINEM                   ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+46013,V6,KRUIBEKE                   ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+45017,V4,KRUISHOUTEM                ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+34023,V8,KUURNE                     ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+13053,V4,LAAKDAL                    ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+42010,V3,LAARNE                     ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+73042,V12,LANAKEN                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+24059,V6,LANDEN                     ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+33040,V3,LANGEMARK-POELKAPELLE      ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+42011,V6,LEBBEKE                    ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+41034,V6,LEDE                       ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+36010,V3,LEDEGEM                    ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+34025,V3,LENDELEDE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+23104,V1,LENNIK                     ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+71034,V5,LEOPOLDSBURG               ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+24062,V15,LEUVEN                     ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+36011,V3,LICHTERVELDE               ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+12021,V5,LIER                       ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+45063,V9,LIERDE                     ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+13019,V12,LILLE                      ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+23100,V11,LINKEBEEK                  ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+11025,V1,LINT                       ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+24133,V9,LINTER                     ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+44034,V12,LOCHRISTI                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+46014,V7,LOKEREN                    ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+72020,V12,LOMMEL                     ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+32030,V3,LO-RENINGE                 ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+44036,V2,LOVENDEGEM                 ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+24066,V1,LUBBEEK                    ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+71037,V4,LUMMEN                     ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+45064,V9,MAARKEDAL                  ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+72021,V12,MAASEIK                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+73107,V7,MAASMECHELEN               ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+43010,V3,MALDEGEM                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11057,V13,MALLE                      ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+12025,V14,MECHELEN                   ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+13021,V4,MEERHOUT                   ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+72040,V12,MEEUWEN-GRUITRODE          ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+44040,V1,MELLE                      ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+34027,V7,MENEN                      ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+44043,V1,MERELBEKE                  ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+13023,V12,MERKSPLAS                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+33016,V3,MESEN                      ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+37007,V3,MEULEBEKE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+35011,V16,MIDDELKERKE                ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+44045,V3,MOERBEKE                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+13025,V5,MOL                        ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+36012,V3,MOORSLEDE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11029,V10,MORTSEL                    ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+44048,V1,NAZARETH                   ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+72025,V12,NEERPELT                   ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+44049,V2,NEVELE                     ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+11030,V7,NIEL                       ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+71045,V9,NIEUWERKERKEN              ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+38016,V16,NIEUWPOORT                 ,Toeristische gemeenten,Kustgemeenten,HC6,Toeristisch
+12026,V2,NIJLEN                     ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+41048,V5,NINOVE                     ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+13029,V13,OLEN                       ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+35013,V15,OOSTENDE                   ,Centrumgemeenten,Grote en regionale steden,HC5,Centrumstad
+44052,V2,OOSTERZELE                 ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+31022,V4,OOSTKAMP                   ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+37010,V4,OOSTROZEBEKE               ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+71047,V13,OPGLABBEEK                 ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+45035,V5,OUDENAARDE                 ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+35014,V3,OUDENBURG                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+24086,V1,OUD-HEVERLEE               ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+13031,V2,OUD-TURNHOUT               ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+72029,V13,OVERPELT                   ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+72030,V12,PEER                       ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+23064,V9,PEPINGEN                   ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+37011,V3,PITTEM                     ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+33021,V5,POPERINGE                  ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+12029,V2,PUTTE                      ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+12030,V8,PUURS                      ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+11035,V2,RANST                      ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+13035,V12,RAVELS                     ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+13036,V12,RETIE                      ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+73066,V9,RIEMST                     ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+13037,V4,RIJKEVORSEL                ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+36015,V14,ROESELARE                  ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+45041,V7,RONSE                      ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+23097,V2,ROOSDAAL                   ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+24094,V1,ROTSELAAR                  ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+37012,V3,RUISELEDE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11037,V6,RUMST                      ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+11038,V7,SCHELLE                    ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+24134,V6,SCHERPENHEUVEL-ZICHEM      ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+11039,V11,SCHILDE                    ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+11040,V10,SCHOTEN                    ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+12034,V6,SINT-AMANDS                ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+23101,V11,SINT-GENESIUS-RODE         ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+46020,V6,SINT-GILLIS-WAAS           ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+12035,V2,SINT-KATELIJNE-WAVER       ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+43014,V9,SINT-LAUREINS              ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+41063,V2,SINT-LIEVENS-HOUTEM        ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+44064,V11,SINT-MARTENS-LATEM         ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+46021,V14,SINT-NIKLAAS               ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+23077,V10,SINT-PIETERS-LEEUW         ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+71053,V5,SINT-TRUIDEN               ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+34043,V3,SPIERE-HELKIJN             ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+11044,V6,STABROEK                   ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+36019,V3,STADEN                     ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+23081,V1,STEENOKKERZEEL             ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+46024,V12,STEKENE                    ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+46025,V7,TEMSE                      ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+23086,V10,TERNAT                     ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+24104,V11,TERVUREN                   ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+71057,V13,TESSENDERLO                ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+37015,V5,TIELT                      ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+24135,V9,TIELT-WINGE                ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+24107,V5,TIENEN                     ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+73083,V5,TONGEREN                   ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+31033,V5,TORHOUT                    ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+24109,V1,TREMELO                    ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+13040,V14,TURNHOUT                   ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+38025,V5,VEURNE                     ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+23088,V14,VILVOORDE                  ,Centrumgemeenten,Regionale steden,HC5,Centrumstad
+33041,V3,VLETEREN                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+73109,V9,VOEREN                     ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+13044,V12,VORSELAAR                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+13046,V1,VOSSELAAR                  ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+44072,V6,WAARSCHOOT                 ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+42023,V2,WAASMUNSTER                ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+44073,V6,WACHTEBEKE                 ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+34040,V8,WAREGEM                    ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+73098,V12,WELLEN                     ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+23102,V11,WEMMEL                     ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+33029,V7,WERVIK                     ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+13049,V13,WESTERLO                   ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+42025,V5,WETTEREN                   ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+34041,V7,WEVELGEM                   ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+23103,V11,WEZEMBEEK-OPPEM            ,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+42026,V6,WICHELEN                   ,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+37017,V13,WIELSBEKE                  ,Gemeenten met een concentratie van economische activiteit,Verstedelijkte plattelandsgemeenten met industriële activiteit en demografische groei,HC3,Concentratie econ. activiteit
+11050,V10,WIJNEGEM                   ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+12040,V7,WILLEBROEK                 ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+37018,V4,WINGENE                    ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+11052,V10,WOMMELGEM                  ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+45061,V9,WORTEGEM-PETEGEM           ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+11053,V12,WUUSTWEZEL                 ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+11054,V2,ZANDHOVEN                  ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+23094,V10,ZAVENTEM                   ,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+31040,V4,ZEDELGEM                   ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+42028,V7,ZELE                       ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+43018,V7,ZELZATE                    ,Agglomeratiegemeenten,Sterk verstedelijkte gemeenten met lage inkomens,HC4,Semi-stedelijk
+23096,V1,ZEMST                      ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+45057,V2,ZINGEM                     ,Woongemeenten,In landelijke zones,HC1,Woongemeente
+11055,V1,ZOERSEL                    ,Woongemeenten,In de stadsrand,HC1,Woongemeente
+44080,V3,ZOMERGEM                   ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+71066,V12,ZONHOVEN                   ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+33037,V3,ZONNEBEKE                  ,Landelijke gemeenten,Erg landelijke gemeenten met sterke vergrijzing,HC2,Landelijk
+41081,V5,ZOTTEGEM                   ,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+24130,V9,ZOUTLEEUW                  ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+31042,V9,ZUIENKERKE                 ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+44081,V4,ZULTE                      ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+71067,V12,ZUTENDAAL                  ,Landelijke gemeenten,Landelijk of verstedelijkte plattelandsgemeenten met sterke demografische groei,HC2,Landelijk
+45065,V9,ZWALM                      ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+34042,V4,ZWEVEGEM                   ,Gemeenten met een concentratie van economische activiteit,Landelijke en landbouwgemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+11056,V8,ZWIJNDRECHT                ,Gemeenten met een concentratie van economische activiteit,Steden en agglomeratiegemeenten met industriële activiteit,HC3,Concentratie econ. activiteit
+23002,V10,ASSE,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23003,V10,BEERSEL,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23016,V10,DILBEEK,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23023,V9,GALMAARDEN ,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+23024,V9,GOOIK,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+23025,V10,GRIMBERGEN,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23027,V5,HALLE,Centrumgemeenten,Middelgrote steden,HC5,Centrumstad
+23032,V9,HERNE,Landelijke gemeenten,Kleine landbouwgemeenten,HC2,Landelijk
+23033,V11,HOEILAART,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+23038,V1,KAMPENHOUT,Woongemeenten,In de stadsrand,HC1,Woongemeente
+23039,V2,KAPELLE-OP-DEN-BOS,Woongemeenten,In landelijke zones,HC1,Woongemeente
+23044,V6,LIEDEKERKE,Agglomeratiegemeenten,Weinig verstedelijkte gemeenten met demografische achteruitgang,HC4,Semi-stedelijk
+23045,V2,LONDERZEEL,Woongemeenten,In landelijke zones,HC1,Woongemeente
+23047,V10,MACHELEN,Woongemeenten,Agglomeratiegemeenten met tertiaire activiteit,HC1,Woongemeente
+23050,V1,MEISE,Woongemeenten,In de stadsrand,HC1,Woongemeente
+23052,V1,MERCHTEM,Woongemeenten,In de stadsrand,HC1,Woongemeente
+23060,V1,OPWIJK,Woongemeenten,In de stadsrand,HC1,Woongemeente
+23062,V11,OVERIJSE,Woongemeenten,Residentiële randgemeenten met hoge inkomens,HC1,Woongemeente
+62006,W1,AWANS                      ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+62119,W1,BLEGNY                     ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25015,W1,BRAINE-LE-CHATEAU          ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25117,W1,CHASTRE                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25023,W1,COURT-SAINT-ETIENNE        ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+92035,W1,EGHEZEE                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+92048,W1,FOSSES-LA-VILLE            ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25031,W1,GENAPPE                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+63038,W1,JALHAY                     ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+62060,W1,JUPRELLE                   ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+53044,W1,JURBISE                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+92141,W1,LA BRUYERE                 ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+52075,W1,LES BONS VILLERS           ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+63048,W1,LONTZEN                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+81015,W1,MESSANCY                   ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25068,W1,MONT-SAINT-GUIBERT         ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25084,W1,PERWEZ                     ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+92101,W1,PROFONDEVILLE              ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+63061,W1,RAEREN                     ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25123,W1,REBECQ                     ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+55039,W1,SILLY                      ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+62099,W1,SOUMAGNE                   ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+62100,W1,SPRIMONT                   ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+63076,W1,THEUX                      ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25107,W1,VILLERS-LA-VILLE           ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+93088,W1,WALCOURT                   ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+25124,W1,WALHAIN                    ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+91141,W1,YVOIR                      ,Communes résidentielles,Communes résidentielles en zones péri-urbaines ou frontalières,HC1,Woongemeente
+51004,W2,ATH                        ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+55004,W2,BRAINE-LE-COMTE            ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+55010,W2,ENGHIEN                    ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+92142,W2,GEMBLOUX                   ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+64034,W2,HANNUT                     ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+63035,W2,HERVE                      ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+25048,W2,JODOIGNE                   ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+55040,W2,SOIGNIES                   ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+56078,W2,THUIN                      ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+64074,W2,WAREMME                    ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+63084,W2,WELKENRAEDT                ,"Communes ""centre""",Petites villes,HC5,Centrumstad
+61079,W3,ANTHISNES                  ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+92006,W3,ASSESSE                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+81003,W3,ATTERT                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+63004,W3,BAELEN                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64008,W3,BERLOZ                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64015,W3,BRAIVES                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61010,W3,BURDINNE                   ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61012,W3,CLAVIER                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64021,W3,CRISNEE                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+62027,W3,DALHEM                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64023,W3,DONCEEL                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+85009,W3,ETALLE                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64076,W3,FAIMES                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+92138,W3,FERNELMONT                 ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61019,W3,FERRIERES                  ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64025,W3,FEXHE-LE-HAUT-CLOCHER      ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+92054,W3,GESVES                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+85046,W3,HABAY                      ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+91059,W3,HAMOIS                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+25118,W3,HELECINE                   ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61028,W3,HERON                      ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+25043,W3,INCOURT                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64047,W3,LINCENT                    ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61041,W3,MODAVE                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+85026,W3,MUSSON                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+92097,W3,OHEY                       ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+63057,W3,OLNE                       ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+25120,W3,ORP-JAUCHE                 ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+25122,W3,RAMILLIES                  ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64063,W3,REMICOURT                  ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+85034,W3,SAINT-LEGER                ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+63089,W3,THIMISTER-CLERMONT         ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61081,W3,TINLOT                     ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+61063,W3,VERLAINE                   ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+64075,W3,WASSEIGES                  ,Communes résidentielles,Communes résidentielles en zones rurales,HC1,Woongemeente
+91005,W4,ANHEE                      ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+62011,W4,BASSENGE                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+56005,W4,BEAUMONT                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+57093,W4,BRUNEHAUT                  ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+57018,W4,CELLES                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+51014,W4,CHIEVRES                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+62026,W4,COMBLAIN-AU-PONT           ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+93018,W4,DOISCHE                    ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+51017,W4,ELLEZELLES                 ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+56085,W4,ESTINNES                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+51019,W4,FLOBECQ                    ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+51065,W4,FRASNES-LEZ-ANVAING        ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+61024,W4,HAMOIR                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+91064,W4,HAVELANGE                  ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+53039,W4,HENSIES                    ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+53083,W4,HONNELLES                  ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+55035,W4,LE ROEULX                  ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+53046,W4,LENS                       ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+56044,W4,LOBBES                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+85024,W4,MEIX-DEVANT-VIRTON         ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+56049,W4,MERBES-LE-CHATEAU          ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+92087,W4,METTET                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+57095,W4,MONT-DE-L'ENCLUS           ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+83040,W4,NASSOGNE                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+91103,W4,ONHAYE                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+61048,W4,OUFFET                     ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+63088,W4,PLOMBIERES                 ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+53084,W4,QUEVY                      ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+57072,W4,RUMES                      ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+56088,W4,SIVRY-RANCE                ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+85039,W4,TINTIGNY                   ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+62122,W4,TROOZ                      ,Communes rurales,Communes rurales à dominante agricole et à faible activités touristiques,HC2,Landelijk
+57003,W5,ANTOING                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+63003,W5,AUBEL                      ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+51012,W5,BRUGELETTE                 ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+55050,W5,ECAUSSINNES                ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+61080,W5,ENGIS                      ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+57027,W5,ESTAIMPUIS                 ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+92045,W5,FLOREFFE                   ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+64029,W5,GEER                       ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+25044,W5,ITTRE                      ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+57094,W5,LEUZE-EN-HAINAUT           ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+63046,W5,LIMBOURG                   ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+61039,W5,MARCHIN                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+56051,W5,MOMIGNIES                  ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+64056,W5,OREYE                      ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+57062,W5,PECQ                       ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+63058,W5,PEPINSTER                  ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+85047,W5,ROUVROY                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+64065,W5,SAINT-GEORGES-SUR-MEUSE    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+52063,W5,SENEFFE                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+92114,W5,SOMBREFFE                  ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+61068,W5,VILLERS-LE-BOUILLET        ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+61072,W5,WANZE                      ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones rurales ou semi-urbaine,HC3,Concentratie econ. activiteit
+63001,W6,AMEL                       ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+82005,W6,BERTOGNE                   ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91015,W6,BIEVRE                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63012,W6,BULLINGEN                  ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63087,W6,BURG-REULAND               ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63013,W6,BUTGENBACH                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+93010,W6,CERFONTAINE                ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+85007,W6,CHINY                      ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84016,W6,DAVERDISSE                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+83013,W6,EREZEE                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+82009,W6,FAUVILLERS                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+56029,W6,FROIDCHAPELLE              ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91054,W6,GEDINNE                    ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+82037,W6,GOUVY                      ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91142,W6,HASTIERE                   ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84029,W6,HERBEUMONT                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+83028,W6,HOTTON                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91072,W6,HOUYET                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84033,W6,LEGLISE                    ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84035,W6,LIBIN                      ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63045,W6,LIERNEUX                   ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+83055,W6,MANHAY                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+81013,W6,MARTELANGE                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84050,W6,PALISEUL                   ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+83044,W6,RENDEUX                    ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+82038,W6,SAINTE-ODE                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91120,W6,SOMME-LEUZE                ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63075,W6,STOUMONT                   ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84068,W6,TELLIN                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+83049,W6,TENNEVILLE                 ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63086,W6,TROIS-PONTS                ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+82036,W6,VAUX-SUR-SURE              ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+93090,W6,VIROINVAL                  ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+91143,W6,VRESSE-SUR-SEMOIS          ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+63080,W6,WAIMES                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+84075,W6,WELLIN                     ,Communes rurales,Communes rurales à dominante forestière avec activités touristiques,HC2,Landelijk
+62009,W7,AYWAILLE                   ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+91013,W7,BEAURAING                  ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+84009,W7,BERTRIX                    ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+84010,W7,BOUILLON                   ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+56016,W7,CHIMAY                     ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+93014,W7,COUVIN                     ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+83012,W7,DURBUY                     ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+93022,W7,FLORENNES                  ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+85011,W7,FLORENVILLE                ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+82014,W7,HOUFFALIZE                 ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+83031,W7,LA ROCHE EN ARDENNE        ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+84043,W7,NEUFCHATEAU                ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+93056,W7,PHILIPPEVILLE              ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+91114,W7,ROCHEFORT                  ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+84059,W7,SAINT-HUBERT               ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+63073,W7,STAVELOT                   ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+82032,W7,VIELSALM                   ,"Communes ""centre""",Communes centre et centres touristiques,HC5,Centrumstad
+61003,W8,AMAY                       ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+92003,W8,ANDENNE                    ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+56001,W8,ANDERLUES                  ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+51008,W8,BELOEIL                    ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+51009,W8,BERNISSART                 ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+52010,W8,CHAPELLE-LEZ-HERLAIMONT    ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+53020,W8,DOUR                       ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+56022,W8,ERQUELINNES                ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+57064,W8,PERUWELZ                   ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+52055,W8,PONT-A-CELLES              ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+53068,W8,QUIEVRAIN                  ,Communes semi-urbaines ou d'agglomération,Communes faiblement urbanisées,HC4,Semi-stedelijk
+62015,W9,BEYNE-HEUSAY               ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+56011,W9,BINCHE                     ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+53014,W9,BOUSSU                     ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+52012,W9,CHATELET                   ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+53082,W9,COLFONTAINE                ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+52015,W9,COURCELLES                 ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+63020,W9,DISON                      ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+52018,W9,FARCIENNES                 ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+62038,W9,FLERON                     ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+52022,W9,FONTAINE-L'EVEQUE          ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+53028,W9,FRAMERIES                  ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+56087,W9,MORLANWELZ                 ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+53065,W9,QUAREGNON                  ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+62093,W9,SAINT-NICOLAS              ,Communes semi-urbaines ou d'agglomération,"Pôles urbains périphériques, conurbation",HC4,Semi-stedelijk
+52011,W10,CHARLEROI                  ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+55022,W10,LA LOUVIERE                ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+62063,W10,LIEGE                      ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+53053,W10,MONS                       ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+54007,W10,MOUSCRON                   ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+92094,W10,NAMUR                      ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+62096,W10,SERAING                    ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+57081,W10,TOURNAI                    ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+63079,W10,VERVIERS                   ,"Communes ""centre""",Grandes villes et villes régionales,HC5,Centrumstad
+52074,W11,AISEAU-PRESLES             ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62003,W11,ANS                        ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+81004,W11,AUBANGE                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+54010,W11,COMINES                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62120,W11,FLEMALLE                   ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+52021,W11,FLEURUS                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62118,W11,GRACE-HOLLOGNE             ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62051,W11,HERSTAL                    ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+92140,W11,JEMEPPE-SUR-SAMBRE         ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+63040,W11,KELMIS                     ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+55023,W11,LESSINES                   ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+52043,W11,MANAGE                     ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62079,W11,OUPEYE                     ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+53070,W11,SAINT-GHISLAIN             ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+92137,W11,SAMBREVILLE                ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+25105,W11,TUBIZE                     ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+62108,W11,VISE                       ,Communes avec concentration d'activités économiques,Communes avec activités économiques en zones urbaines ou d'agglomération,HC3,Concentratie econ. activiteit
+82003,W12,BASTOGNE                   ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+91030,W12,CINEY                      ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+91034,W12,DINANT                     ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+84077,W12,LIBRAMONT-CHEVIGNY         ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+63049,W12,MALMEDY                    ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+83034,W12,MARCHE-EN-FAMENNE          ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+63067,W12,SANKT VITH                 ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+63072,W12,SPA                        ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+85045,W12,VIRTON                     ,"Communes ""centre""","Villes ""centre"" en milieu rural",HC5,Centrumstad
+81001,W13,ARLON                      ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+25014,W13,BRAINE-L'ALLEUD            ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+63023,W13,EUPEN                      ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+61031,W13,HUY                        ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+25072,W13,NIVELLES                   ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+25121,W13,OTTIGNIES-LOUVAIN-LA-NEUVE ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+25112,W13,WAVRE                      ,"Communes ""centre""",Villes moyennes à revenus élevés,HC5,Centrumstad
+25005,W14,BEAUVECHAIN                ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+62022,W14,CHAUDFONTAINE              ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25018,W14,CHAUMONT-GISTOUX           ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+62032,W14,ESNEUX                     ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+52025,W14,GERPINNES                  ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25037,W14,GREZ-DOICEAU               ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+56086,W14,HAM-SUR-HEURE-NALINNES     ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25050,W14,LA HULPE                   ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25119,W14,LASNE                      ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+52048,W14,MONTIGNY-LE-TILLEUL        ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+61043,W14,NANDRIN                    ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+62121,W14,NEUPRE                     ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25091,W14,RIXENSART                  ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+25110,W14,WATERLOO                   ,Communes résidentielles,Communes résidentielles à niveau de revenus élevés,HC1,Woongemeente
+21002,B1,AUDERGHEM-OUDERGEM         ,Communes résidentielles sud-est ,Woongemeenten zuidoosten,HC1,Woongemeente
+21016,B1,UCCLE-UKKEL                ,Communes résidentielles sud-est ,Woongemeenten zuidoosten,HC1,Woongemeente
+21017,B1,WATERMAEL-BOITSFORT        ,Communes résidentielles sud-est ,Woongemeenten zuidoosten,HC1,Woongemeente
+21018,B1,WOLUWE-SAINT-LAMBERT       ,Communes résidentielles sud-est ,Woongemeenten zuidoosten,HC1,Woongemeente
+21019,B1,WOLUWE-SAINT-PIERRE        ,Communes résidentielles sud-est ,Woongemeenten zuidoosten,HC1,Woongemeente
+21003,B2,BERCHEM-SAINTE-AGATHE      ,Communes résidentielles nord-ouest ,Woongemeenten noordwesten,HC1,Woongemeente
+21006,B2,EVERE                      ,Communes résidentielles nord-ouest ,Woongemeenten noordwesten,HC1,Woongemeente
+21008,B2,GANSHOREN                  ,Communes résidentielles nord-ouest ,Woongemeenten noordwesten,HC1,Woongemeente
+21010,B2,JETTE                      ,Communes résidentielles nord-ouest ,Woongemeenten noordwesten,HC1,Woongemeente
+21011,B2,KOEKELBERG                 ,Communes résidentielles nord-ouest ,Woongemeenten noordwesten,HC1,Woongemeente
+21005,B3,ETTERBEEK                  ,Communes 1ère couronne ,Gemeenten 1e gordel,HC7,Sterk verstedelijkt
+21009,B3,IXELLES-ELSENE             ,Communes 1ère couronne ,Gemeenten 1e gordel,HC7,Sterk verstedelijkt
+21013,B3,SAINT-GILLES-SINT-GILLIS   ,Communes 1ère couronne ,Gemeenten 1e gordel,HC7,Sterk verstedelijkt
+21014,B3,SAINT-JOSSE-TEN-NOODE      ,Communes 1ère couronne ,Gemeenten 1e gordel,HC7,Sterk verstedelijkt
+21001,B4,ANDERLECHT                 ,Communes industrielles zone canal ,Industriële gemeenten kanaalzone,HC7,Sterk verstedelijkt
+21007,B4,FOREST-VORST               ,Communes industrielles zone canal ,Industriële gemeenten kanaalzone,HC7,Sterk verstedelijkt
+21012,B4,MOLENBEEK-SAINT-JEAN       ,Communes industrielles zone canal ,Industriële gemeenten kanaalzone,HC7,Sterk verstedelijkt
+21015,B4,SCHAERBEEK-SCHAARBEEK      ,Communes industrielles zone canal ,Industriële gemeenten kanaalzone,HC7,Sterk verstedelijkt
+21004,B5,BRUXELLES-BRUSSEL          ,Ville de Bruxelles,Stad Brussel,HC7,Sterk verstedelijkt
