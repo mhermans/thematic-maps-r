@@ -23,7 +23,6 @@ library(readxl)
 library(eurostat)
 library(leaflet)
 library(haven)
-library(leaflet)
 ```
 
 # Socio-economic clusters

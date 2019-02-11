@@ -40,7 +40,7 @@ Semi-random example: [download the open-data spatial boundaries](https://geo.onr
 
 ```{r, message=FALSE, warning=FALSE}
 library(rgdal)
-heritage <- readOGR('data/heritage_plans/', layer = 'heritage_plans')
+heritage <- readOGR('data/heritage_plans', layer = 'heritage_plans')
 heritage <- st_as_sf(heritage)
 ```
 

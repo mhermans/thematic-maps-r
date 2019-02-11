@@ -245,14 +245,35 @@ $(document).ready(function () {
 <li>Expectations? Questions?</li>
 </ol>
 </div>
-<div id="setup" class="section level1">
-<h1>Setup</h1>
+<div id="setup-optional-if-you-want-run-examples-during-the-session" class="section level1">
+<h1>Setup (optional, if you want run examples during the session)</h1>
 <ul>
 <li><a href="https://cran.r-project.org/bin/windows/base/">Download</a> and install R.</li>
 <li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download</a> and install Rstudio.</li>
+<li><a href="https://github.com/mhermans/thematic-maps-r/archive/master.zip">Download</a> (25MB) and unzip folder with session material (or <a href="https://github.com/mhermans/thematic-maps-r">clone from Github</a>).</li>
+<li>Open project in Rstudio by clicking “thematic_maps_with_r.Rproj” in unzipped folder.</li>
 <li>Run commands below to install required R-packages.</li>
 </ul>
-<pre class="r"><code>install.packages(c(&#39;eurostat&#39;, &#39;rworldmap&#39;, &#39;rgdal&#39;, &#39;sf&#39;, &#39;osmdata&#39;, &#39;tmap&#39;, &#39;tmaptools&#39;, &#39;countrycode&#39;, &#39;ggplot2&#39;))</code></pre>
+<pre class="r"><code>install.packages(&#39;rmarkdown&#39;)
+install.packages(&#39;sf&#39;)
+install.packages(&#39;tmap&#39;)
+install.packages(&#39;dplyr&#39;)
+install.packages(&#39;readxl&#39;)
+install.packages(&#39;eurostat&#39;)
+install.packages(&#39;leaflet&#39;)
+install.packages(&#39;haven&#39;)
+install.packages(&#39;mapview&#39;)
+install.packages(&#39;rgdal&#39;)
+install.packages(&#39;tmaptools&#39;)
+install.packages(&#39;countrycode&#39;)
+install.packages(&#39;stringr&#39;)
+install.packages(&#39;readr&#39;)
+install.packages(&#39;ggplot2&#39;)
+install.packages(&#39;htmlwidgets&#39;)
+install.packages(&#39;rworldmap&#39;)
+install.packages(&#39;lubridate&#39;)
+
+install.packages(&quot;BelgiumMaps.StatBel&quot;, repos = &quot;http://www.datatailor.be/rcube&quot;, type = &quot;source&quot;)</code></pre>
 </div>
 <div id="r-syntax-in-a-nutshell-enough-to-follow-along" class="section level1">
 <h1>R-syntax in a nutshell (enough to follow along)</h1>

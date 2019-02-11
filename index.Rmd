@@ -26,14 +26,36 @@ title: "Show & tell: thematic maps with R"
 4. Outline of worked examples / approach
 5. Expectations? Questions?
 
-# Setup
+# Setup (optional, if you want run examples during the session)
 
 * [Download](https://cran.r-project.org/bin/windows/base/) and install R.
 * [Download](https://www.rstudio.com/products/rstudio/download/#download) and install Rstudio.
+* [Download](https://github.com/mhermans/thematic-maps-r/archive/master.zip) (25MB) and unzip folder with session material (or [clone from Github](https://github.com/mhermans/thematic-maps-r)).
+* Open project in Rstudio by clicking "thematic_maps_with_r.Rproj" in unzipped folder.
 * Run commands below to install required R-packages.
 
 ```{r, eval=FALSE}
-install.packages(c('eurostat', 'rworldmap', 'rgdal', 'sf', 'osmdata', 'tmap', 'tmaptools', 'countrycode', 'ggplot2'))
+
+install.packages('rmarkdown')
+install.packages('sf')
+install.packages('tmap')
+install.packages('dplyr')
+install.packages('readxl')
+install.packages('eurostat')
+install.packages('leaflet')
+install.packages('haven')
+install.packages('mapview')
+install.packages('rgdal')
+install.packages('tmaptools')
+install.packages('countrycode')
+install.packages('stringr')
+install.packages('readr')
+install.packages('ggplot2')
+install.packages('htmlwidgets')
+install.packages('rworldmap')
+install.packages('lubridate')
+
+install.packages("BelgiumMaps.StatBel", repos = "http://www.datatailor.be/rcube", type = "source")
 ```
 
 # R-syntax in a nutshell (enough to follow along)

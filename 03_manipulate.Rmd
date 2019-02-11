@@ -149,7 +149,7 @@ qtm(munip_district, fill = 'income_mean_ppp_aggr', fill.title = 'Mean income (20
 
 ```{r}
 # load spatial boundaries with readOGR()
-heritage <- readOGR('data/heritage_plans/', layer = 'heritage_plans')
+heritage <- readOGR('data/heritage_plans', layer = 'heritage_plans')
 heritage <- st_as_sf(heritage)
 ```
 
