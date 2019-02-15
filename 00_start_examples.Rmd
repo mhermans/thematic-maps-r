@@ -10,7 +10,7 @@ output:
 Illustrating through exampes common steps for common thematic maps:
 
 1. Get an appropriate blank map.
-1. Load and add "regular" data.
+2. Load and add "regular" data.
 3. Manipulate (spatial) data.
 4. Plot map.
 

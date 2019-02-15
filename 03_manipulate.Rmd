@@ -22,6 +22,7 @@ library(sf)
 library(tmap)       # plot thematic map with qtm()
 library(dplyr)      # general data-manipulation
 library(stringr)    # string-operations str_sub()
+library(readr)      # read CSV-file read_csv()
 ```
 
 
@@ -49,6 +50,7 @@ qtm(muni, fill = 'hoofdcluster_lbl', fill.title = 'Socio-economic cluster')
 ```
 
 ```{r}
+# group all muncipalities together in contiuous spatial area's, if they share the same cluster
 muni_clusterd <- muni %>%
   group_by(hoofdcluster_lbl) %>%
   tally()

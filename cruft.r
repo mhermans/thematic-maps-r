@@ -1,3 +1,16 @@
+# Questions sessions 2019-02-11, 2019-02-14
+# 
+# Spatial join to fix Brussels
+# 
+# How do I format tmap legends with percentages?
+#   
+# Possbility of using hex-based binning?
+#   
+# Can I add points to a thematic map?
+# 
+# Adding a logo to ggplot-based map?
+
+
 # 
 # 
 # ```{r}
