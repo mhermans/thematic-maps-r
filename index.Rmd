@@ -1,38 +1,42 @@
 ---
-title: "Show & tell: thematic maps with R"
+title: "Making thematic maps with R"
+author: "Maarten Hermans"
 ---
 
-# Schedule
+This online walkthrough accompanies a [3h "show-and-tell" workshop](https://mhermans.net/talk/2019-02-11-r-thematic-maps/) on **making thematic (choropleth) maps in R**. 
 
-* Monday 11/02
-    - Intro-presentation.
-    - Examples [step 1, 2] getting maps & adding data.
-* Thursday 14/02
-    - Short recapitulation intro-presentation.
-    - Examples [step 3, 4] manipulating data & plotting.
-    - [depending on timing] Q&A, own examples / data.
+The worked examples demonistrate the quickest routes for getting your data in R and on a map, with a focus on showing how spatial data can be integrated in a familiar [tidyverse data-analysis workflow](https://www.tidyverse.org/). 
 
-# Intro-presentation
+The examples demonstrate mainly static maps, but interactive thematic maps are included as well. R packages demonistrated are primary
 
-1. (Dis)advantages of R
-2. Why spatial datavis. in R is become increasingly interesting
-    - tidyverse
-    - spatial features
-    - one workflow for spatial & regular data
-3. Recommended packages for thematic maps
-    - tmap
-    - ggplot / leaflet / mapview
-    - supporting packages
-4. Outline of worked examples / approach
-5. Expectations? Questions?
+* [sf](https://r-spatial.github.io/sf/) and [tmap](https://github.com/mtennekes/tmap#tmap-thematic-maps-in-r), together with 
+* [leaflet](https://rstudio.github.io/leaflet/), [ggplot](https://ggplot2.tidyverse.org/) and 
+* supporting packages such as [BelgiumMaps.StatBel](http://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium) and [eurostat](https://ropengov.github.io/eurostat/index.html).  
 
-# Setup (optional, if you want run examples during the session)
+Intended audience is basic R users (or those interested in seeing what R can do), who wish integrate spatial data into their "regular" (exploratory) data-analysis workflow, or who need a quick map. More advanced [GIS](https://en.wikipedia.org/wiki/Geographic_information_system)-topics such as projection fall outside of the scope. 
 
-* [Download](https://cran.r-project.org/bin/windows/base/) and install R.
-* [Download](https://www.rstudio.com/products/rstudio/download/#download) and install Rstudio.
-* [Download](https://github.com/mhermans/thematic-maps-r/archive/master.zip) (25MB) and unzip folder with session material (or [clone from Github](https://github.com/mhermans/thematic-maps-r)).
-* Open project in Rstudio by clicking "thematic_maps_with_r.Rproj" in unzipped folder.
-* Run commands below to install required R-packages.
+The material and examples are structured along the basic steps you generally take when making thematic maps:
+
+0. [Motivating examples](00_start_examples.html) of static and interactive thematic maps.
+1. [Get an appropriate blank map](01_get_maps.html) to visualise your data on, e.g. from Belgium, Europe or the world.
+2. [Load and add](02_add_data.html) the data-of-interest you wish to visualise.
+3. Jointly [manipulate](03_manipulate.html) your spatial and "regular" data.
+4. Finally, [plot and tweak your map](04_plot.html). E.g. choosing color palettes, multiple maps, styling, etc.
+
+I like [hearing from you](https://mhermans.net/#contact) if this walkthrough has been useful somehow, if something is not working or can be improved, or if you are interested in a workshop. 
+
+# Download the material
+
+You can copy-past the code snippets from the online pages, [download](https://github.com/mhermans/thematic-maps-r/archive/master.zip) (25MB) the entire set of material, or [clone from Github](https://github.com/mhermans/thematic-maps-r).
+
+Opening the file `thematic_maps_with_r.Rproj` in the downloaded folder launches an Rstudio-project, after which you should be able to open, adapt, and run the Rmarkdown notebooks containing the examples (files ending in .Rmd).
+
+
+# Setup
+
+1. [Download](https://cran.r-project.org/bin/windows/base/) and install R.
+2. [Download](https://www.rstudio.com/products/rstudio/download/#download) and install Rstudio.
+3. Run commands below to install required R-packages.
 
 ```{r, eval=FALSE}
 
@@ -56,26 +60,4 @@ install.packages('rworldmap')
 install.packages('lubridate')
 
 install.packages("BelgiumMaps.StatBel", repos = "http://www.datatailor.be/rcube", type = "source")
-```
-
-# R-syntax in a nutshell (enough to follow along)
-
-```{r, eval=FALSE}
-# Objects, functions, combinations of functions
-
-obj_a <- something            # create/assign something to "object A"
-obj_a                         # show object A
-
-obj_b <- do_something(obj_a)  # change object A, creating object B (function)
- 
-# %>% "pipe" object A through multiple functions, resulting in object B
-obj_b <- obj_a %>%
-  do_something() %>%
-  do_something_else() %>%
-  do_another_thing()
-
-# + add things to object A, resulting in object B
-obj_b <- obj_a +
-  add_something() +
-  add_something()
 ```
