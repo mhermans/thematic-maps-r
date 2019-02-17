@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Maarten Hermans" />
 
 
-<title>Show &amp; tell: thematic maps with R</title>
+<title>Making thematic maps with R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -204,56 +205,42 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Show &amp; tell: thematic maps with R</h1>
+<h1 class="title toc-ignore">Making thematic maps with R</h1>
+<h4 class="author"><em>Maarten Hermans</em></h4>
 
 </div>
 
 
-<div id="schedule" class="section level1">
-<h1>Schedule</h1>
+<p>This online walkthrough accompanies a <a href="https://mhermans.net/talk/2019-02-11-r-thematic-maps/">3h “show-and-tell” workshop</a> on <strong>making thematic (choropleth) maps in R</strong>.</p>
+<p>The worked examples demonistrate the quickest routes for getting your data in R and on a map, with a focus on showing how spatial data can be integrated in a familiar <a href="https://www.tidyverse.org/">tidyverse data-analysis workflow</a>.</p>
+<p>The examples demonstrate mainly static maps, but interactive thematic maps are included as well. R packages demonistrated are primary</p>
 <ul>
-<li>Monday 11/02
-<ul>
-<li>Intro-presentation.</li>
-<li>Examples [step 1, 2] getting maps &amp; adding data.</li>
-</ul></li>
-<li>Thursday 14/02
-<ul>
-<li>Short recapitulation intro-presentation.</li>
-<li>Examples [step 3, 4] manipulating data &amp; plotting.</li>
-<li>[depending on timing] Q&amp;A, own examples / data.</li>
-</ul></li>
+<li><a href="https://r-spatial.github.io/sf/">sf</a> and <a href="https://github.com/mtennekes/tmap#tmap-thematic-maps-in-r">tmap</a>, together with</li>
+<li><a href="https://rstudio.github.io/leaflet/">leaflet</a>, <a href="https://ggplot2.tidyverse.org/">ggplot</a> and</li>
+<li>supporting packages such as <a href="http://www.bnosac.be/index.php/blog/55-belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium">BelgiumMaps.StatBel</a> and <a href="https://ropengov.github.io/eurostat/index.html">eurostat</a>.</li>
 </ul>
-</div>
-<div id="intro-presentation" class="section level1">
-<h1>Intro-presentation</h1>
-<ol style="list-style-type: decimal">
-<li>(Dis)advantages of R</li>
-<li>Why spatial datavis. in R is become increasingly interesting
-<ul>
-<li>tidyverse</li>
-<li>spatial features</li>
-<li>one workflow for spatial &amp; regular data</li>
-</ul></li>
-<li>Recommended packages for thematic maps
-<ul>
-<li>tmap</li>
-<li>ggplot / leaflet / mapview</li>
-<li>supporting packages</li>
-</ul></li>
-<li>Outline of worked examples / approach</li>
-<li>Expectations? Questions?</li>
+<p>Intended audience is basic R users (or those interested in seeing what R can do), who wish integrate spatial data into their “regular” (exploratory) data-analysis workflow, or who need a quick map. More advanced <a href="https://en.wikipedia.org/wiki/Geographic_information_system">GIS</a>-topics such as projection fall outside of the scope.</p>
+<p>The material and examples are structured along the basic steps you generally take when making thematic maps:</p>
+<ol start="0" style="list-style-type: decimal">
+<li><a href="00_start_examples.html">Motivating examples</a> of static and interactive thematic maps.</li>
+<li><a href="01_get_maps.html">Get an appropriate blank map</a> to visualise your data on, e.g. from Belgium, Europe or the world.</li>
+<li><a href="02_add_data.html">Load and add</a> the data-of-interest you wish to visualise.</li>
+<li>Jointly <a href="03_manipulate.html">manipulate</a> your spatial and “regular” data.</li>
+<li>Finally, <a href="04_plot.html">plot and tweak your map</a>. E.g. choosing color palettes, multiple maps, styling, etc.</li>
 </ol>
+<p>I like <a href="https://mhermans.net/#contact">hearing from you</a> if this walkthrough has been useful somehow, if something is not working or can be improved, or if you are interested in a workshop.</p>
+<div id="download-the-material" class="section level1">
+<h1>Download the material</h1>
+<p>You can copy-past the code snippets from the online pages, <a href="https://github.com/mhermans/thematic-maps-r/archive/master.zip">download</a> (25MB) the entire set of material, or <a href="https://github.com/mhermans/thematic-maps-r">clone from Github</a>.</p>
+<p>Opening the file <code>thematic_maps_with_r.Rproj</code> in the downloaded folder launches an Rstudio-project, after which you should be able to open, adapt, and run the Rmarkdown notebooks containing the examples (files ending in .Rmd).</p>
 </div>
-<div id="setup-optional-if-you-want-run-examples-during-the-session" class="section level1">
-<h1>Setup (optional, if you want run examples during the session)</h1>
-<ul>
+<div id="setup" class="section level1">
+<h1>Setup</h1>
+<ol style="list-style-type: decimal">
 <li><a href="https://cran.r-project.org/bin/windows/base/">Download</a> and install R.</li>
 <li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download</a> and install Rstudio.</li>
-<li><a href="https://github.com/mhermans/thematic-maps-r/archive/master.zip">Download</a> (25MB) and unzip folder with session material (or <a href="https://github.com/mhermans/thematic-maps-r">clone from Github</a>).</li>
-<li>Open project in Rstudio by clicking “thematic_maps_with_r.Rproj” in unzipped folder.</li>
 <li>Run commands below to install required R-packages.</li>
-</ul>
+</ol>
 <pre class="r"><code>install.packages(&#39;rmarkdown&#39;)
 install.packages(&#39;sf&#39;)
 install.packages(&#39;tmap&#39;)
@@ -274,26 +261,6 @@ install.packages(&#39;rworldmap&#39;)
 install.packages(&#39;lubridate&#39;)
 
 install.packages(&quot;BelgiumMaps.StatBel&quot;, repos = &quot;http://www.datatailor.be/rcube&quot;, type = &quot;source&quot;)</code></pre>
-</div>
-<div id="r-syntax-in-a-nutshell-enough-to-follow-along" class="section level1">
-<h1>R-syntax in a nutshell (enough to follow along)</h1>
-<pre class="r"><code># Objects, functions, combinations of functions
-
-obj_a &lt;- something            # create/assign something to &quot;object A&quot;
-obj_a                         # show object A
-
-obj_b &lt;- do_something(obj_a)  # change object A, creating object B (function)
- 
-# %&gt;% &quot;pipe&quot; object A through multiple functions, resulting in object B
-obj_b &lt;- obj_a %&gt;%
-  do_something() %&gt;%
-  do_something_else() %&gt;%
-  do_another_thing()
-
-# + add things to object A, resulting in object B
-obj_b &lt;- obj_a +
-  add_something() +
-  add_something()</code></pre>
 </div>
 
 
