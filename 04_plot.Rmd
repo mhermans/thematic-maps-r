@@ -32,7 +32,7 @@ library(ggplot2)
 ```
 
 
-# Themaric maps with tmap
+# Thematic maps with tmap
 
 In an nutshell:
 
