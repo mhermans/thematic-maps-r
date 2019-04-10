@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Questions and answers</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Thematic maps in R</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="00_start_examples.html">Intro</a>
+</li>
+<li>
+  <a href="01_get_maps.html">1. Get maps</a>
+</li>
+<li>
+  <a href="02_add_data.html">2. Add data</a>
+</li>
+<li>
+  <a href="03_manipulate.html">3. Manipulate</a>
+</li>
+<li>
+  <a href="04_plot.html">4. Plot</a>
+</li>
+<li>
+  <a href="questions_answers.html">Q&amp;A</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Questions and answers</h1>
+
+</div>
+
+
+<div id="how-can-i-join-brussels-to-the-rest-of-the-provinces" class="section level1">
+<h1>How can I join Brussels to the rest of the provinces?</h1>
+<pre class="r"><code>library(BelgiumMaps.StatBel)
+library(sf)
+library(dplyr)
+library(tmap)
+
+data(&quot;BE_ADMIN_PROVINCE&quot;)
+data(&quot;BE_ADMIN_REGION&quot;)
+prov &lt;- st_as_sf(BE_ADMIN_PROVINCE)
+region &lt;- st_as_sf(BE_ADMIN_REGION)</code></pre>
+<p>The spatial data in the <code>BelgiumMaps.StatBel</code>-package on provincial level contains a hole for Brussels, as Brussels is a region not a province.</p>
+<pre class="r"><code>qtm(prov)</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We don’t want to spatially join the region of Brussels to the surrounding province of Vlaams-Brabant, but want an additional spatial feature in the set of provinces, representing Brussels.</p>
+<p>As expected with the close alignment through the <code>sf</code>-package of data operations and spatial operations, this can be achieved by stacking the two datasets with the base R function <code>rbind()</code> (row bind).</p>
+<pre class="r"><code>prov &lt;- prov %&gt;%
+  # select and rename variables to have the name names for stacking
+  select(niscode = CD_PROV_REFNIS, label = TX_PROV_DESCR_NL) 
+
+prov # 10 records for 10 provinces</code></pre>
+<pre><code>## Simple feature collection with 10 features and 2 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: 2.545427 ymin: 49.49697 xmax: 6.407937 ymax: 51.50512
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+##       niscode                     label                       geometry
+## 10000   10000       Provincie Antwerpen MULTIPOLYGON (((4.936026 51...
+## 20001   20001  Provincie Vlaams-Brabant MULTIPOLYGON (((5.107924 50...
+## 20002   20002   Provincie Waals-Brabant MULTIPOLYGON (((4.14567 50....
+## 30000   30000 Provincie West-Vlaanderen MULTIPOLYGON (((2.842289 50...
+## 40000   40000 Provincie Oost-Vlaanderen MULTIPOLYGON (((3.491583 50...
+## 50000   50000      Provincie Henegouwen MULTIPOLYGON (((2.911694 50...
+## 60000   60000            Provincie Luik MULTIPOLYGON (((5.351656 50...
+## 70000   70000         Provincie Limburg MULTIPOLYGON (((5.895892 50...
+## 80000   80000       Provincie Luxemburg MULTIPOLYGON (((5.012458 49...
+## 90000   90000           Provincie Namen MULTIPOLYGON (((4.514086 49...</code></pre>
+<pre class="r"><code>brussel &lt;- region %&gt;% filter(
+  # select region of Brussels
+  TX_RGN_DESCR_NL == &#39;Brussels Hoofdstedelijk Gewest&#39;) %&gt;% 
+  # select and rename variables to have the name names for stacking
+  select(niscode = CD_RGN_REFNIS, label = TX_RGN_DESCR_NL)
+
+brussel # one record for Brussels</code></pre>
+<pre><code>## Simple feature collection with 1 feature and 2 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: 4.244665 ymin: 50.76369 xmax: 4.482274 ymax: 50.91372
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+##   niscode                          label                       geometry
+## 1    4000 Brussels Hoofdstedelijk Gewest MULTIPOLYGON (((4.297677 50...</code></pre>
+<pre class="r"><code>prov_bxl &lt;- rbind(prov, brussel) # combine records
+
+prov_bxl %&gt;% print(n=11) # 11 records: 10 provinces + region of Brussels</code></pre>
+<pre><code>## Simple feature collection with 11 features and 2 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: 2.545427 ymin: 49.49697 xmax: 6.407937 ymax: 51.50512
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+##       niscode                          label
+## 10000   10000            Provincie Antwerpen
+## 20001   20001       Provincie Vlaams-Brabant
+## 20002   20002        Provincie Waals-Brabant
+## 30000   30000      Provincie West-Vlaanderen
+## 40000   40000      Provincie Oost-Vlaanderen
+## 50000   50000           Provincie Henegouwen
+## 60000   60000                 Provincie Luik
+## 70000   70000              Provincie Limburg
+## 80000   80000            Provincie Luxemburg
+## 90000   90000                Provincie Namen
+## 1        4000 Brussels Hoofdstedelijk Gewest
+##                             geometry
+## 10000 MULTIPOLYGON (((4.936026 51...
+## 20001 MULTIPOLYGON (((5.107924 50...
+## 20002 MULTIPOLYGON (((4.14567 50....
+## 30000 MULTIPOLYGON (((2.842289 50...
+## 40000 MULTIPOLYGON (((3.491583 50...
+## 50000 MULTIPOLYGON (((2.911694 50...
+## 60000 MULTIPOLYGON (((5.351656 50...
+## 70000 MULTIPOLYGON (((5.895892 50...
+## 80000 MULTIPOLYGON (((5.012458 49...
+## 90000 MULTIPOLYGON (((4.514086 49...
+## 1     MULTIPOLYGON (((4.297677 50...</code></pre>
+<pre class="r"><code>qtm(prov_bxl)</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="how-can-i-join-brussels-as-an-inset-map" class="section level1">
+<h1>How can I join Brussels as an inset-map?</h1>
+<p>Outlying locations (e.g. Alaska on US-maps) or areas-of interested that you want to zoom in on, can also be displayed with an inset map on a main map. This is also handy for Brussels, especially if you want to show details. You can do this in tmap by defining viewports using the <code>grid</code>-package, and specifing the inset map and the viewport for the inset man, when saving the map with `tmap_save().</p>
+<pre class="r"><code>library(readr)
+# load municipal boundaries
+data(&quot;BE_ADMIN_MUNTY&quot;)
+munip_map &lt;- st_as_sf(BE_ADMIN_MUNTY)
+
+# load fiscal income data on municipal level
+munip_data &lt;- read_csv(
+  file = &#39;data/fiscal_incomes_2016.csv&#39;, 
+  col_types = cols(
+    munip_label = col_character(),
+    munip_nis = col_character(),
+    n_inhabitants = col_integer(),
+    income_mean = col_integer() ))
+
+# add map and income data together on muncipal level
+munip &lt;- left_join(
+  munip_map, munip_data, 
+  by = c(&#39;CD_MUNTY_REFNIS&#39; = &#39;munip_nis&#39;))</code></pre>
+<pre class="r"><code># remove Brussels municipalities for the main map (empty hole)
+munip_nobxl &lt;- munip %&gt;% filter(TX_RGN_DESCR_NL != &#39;Brussels Hoofdstedelijk Gewest&#39;)
+
+# construct main map
+mainmap &lt;- qtm(munip_nobxl, fill = &#39;income_mean&#39;, 
+               fill.title = &#39;Mean income&#39;, 
+               # same manual breaks in main and inset map
+               fill.breaks = c(5000, 10000, 15000, 20000, 25000, 30000)) +
+  tm_legend(legend.outside = TRUE, legend.outside.position=&quot;right&quot;)
+
+mainmap</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code># select only Brussels municipalities for the inset map
+munip_onlybxl &lt;- munip %&gt;% filter(TX_RGN_DESCR_NL == &#39;Brussels Hoofdstedelijk Gewest&#39;)
+
+# construct inset map for Brussels
+insetmap &lt;- qtm(munip_onlybxl, fill = &#39;income_mean&#39;, 
+                fill.breaks = c(5000, 10000, 15000, 20000, 25000, 30000)) + 
+  tm_legend(show=FALSE) # no legend for the inset map
+
+insetmap</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre class="r"><code>library(grid)
+
+# specify the location (viewport) for the inset map
+viewport_bxl &lt;- viewport(x = 0.2, y = 0.2, width = 0.3, height = 0.3)
+
+# save map with the inset map and the viewport in addition to the main map
+tmap_save(mainmap, filename = &#39;municipalities_income_inset_bxl.png&#39;, 
+          width = 1600, height = 800, 
+          insets_tm = insetmap, insets_vp = viewport_bxl)</code></pre>
+<div class="figure">
+<img src="output/municipalities_income_inset_bxl.png" alt="inset map" />
+<p class="caption">inset map</p>
+</div>
+</div>
+<div id="how-do-i-format-tmap-legends-with-percentages" class="section level1">
+<h1>How do I format tmap legends with percentages?</h1>
+<p>You can specify detailed, custom functions to format the numbers displayed in the legend, using the <code>legend.format</code> parameter when using <code>tm_fill()</code>. The <a href="https://scales.r-lib.org/">scales package</a> contains some utility functions to format numbers, for percentages we can use <code>percent_format()</code> and specify the number of digits, the decimal mark, etc.</p>
+<pre class="r"><code>munip &lt;- munip %&gt;%
+  # Contrived: calculate mean income in municipalities as percentage of total in Belgium
+  mutate(income_pct = income_mean / sum(income_mean))</code></pre>
+<pre class="r"><code>library(scales)
+
+tm_shape(munip) +
+  tm_fill(col = &#39;income_pct&#39;, 
+          title = &#39;Percentage of income&#39;,
+          legend.format = percent_format(accuracy = .01) ) +
+  tm_borders(col = &#39;white&#39;, lwd = .5)</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code># further customisation
+tm_shape(munip) +
+  tm_fill(col = &#39;income_pct&#39;, 
+          title = &#39;Percentage of income&#39;,
+          legend.format = list(
+            fun = percent_format(accuracy = .01, suffix = &#39; pct&#39;), # &#39;pct&#39; instead of &#39;%&#39;
+            text.separator = &#39;-&#39; )) + # dash instead of &#39;to&#39; for separator 
+  tm_borders(col = &#39;white&#39;, lwd = .5)</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="can-i-add-points-to-a-thematic-map" class="section level1">
+<h1>Can I add points to a thematic map?</h1>
+<p>Yes, in <code>tmap</code> that can be done using functions such as tm_symbols() (generic), or tm_squares(), tm_bubbles(), tm_dots(), or tm_makers().</p>
+<p>You can do this with all records that have coordinates-data (latitude, longitude). As an example, we download the VDAB offices locations from their open data portal (<a href="https://rawgit.com/mhermans/rgeonotebooks/master/vdab_api_popup_map/vdab_api_popup_map.nb.html">other tutorial using this data with an interactive map example</a>).</p>
+<pre class="r"><code>library(jsonlite) # used for converting the JSON data to a dataframe
+
+# Fetch the location data from de VDAB open data portal
+vdab.kantoren = fromJSON(&#39;http://opendata.vdab.be/vdab/locaties.json&#39;) %&gt;%
+  mutate_at(vars(lat, lon), as.double) # coordinates need to be numeric, not a character</code></pre>
+<pre class="r"><code># convert &#39;regular&#39; dataframe to a sf-object
+vdab.kantoren = st_as_sf(
+  vdab.kantoren, 
+  coords = c(&quot;lon&quot;, &quot;lat&quot;), # specify the columns holding the coordinates data
+  crs = 4326, # specify the map projection to be the same as the map projection.
+  agr = &quot;constant&quot;)</code></pre>
+<p>Using <code>tm_symbols()</code>, we layer the office locations on a map that shows the mean income on muncipal level.</p>
+<pre class="r"><code># Only offices in Flanders -&gt; subselect map
+vlaanderen &lt;- munip %&gt;% filter(TX_RGN_DESCR_NL == &#39;Vlaams Gewest&#39;)
+
+map.vdab &lt;- tm_shape(vlaanderen) +
+  tm_fill(col = &#39;income_mean&#39;, title = &#39;Mean income&#39;, alpha = 0.4) + # fill polygons with color
+  tm_borders(col = &#39;white&#39;, lwd = 0.6) +  # white borders between municipalities
+  tm_shape(vdab.kantoren) + # add the spatial dataframle containing points
+  tm_symbols(col = &#39;typelocatie&#39;, title.col = &#39;VDAB office type&#39;, size = 0.3) + # add layer with symbols/points
+  tm_legend(legend.outside = TRUE, legend.outside.position=&quot;right&quot;) # position legend outside
+
+map.vdab</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="how-to-add-a-logo-to-ggplot-based-map" class="section level1">
+<h1>How to add a logo to ggplot-based map?</h1>
+<p>In ggplot, adding a logo is more generic but less intuitive then using <code>tm_logo()</code> in the <code>tmap</code>-package. But you can use the generic function <code>annotation_raster()</code> to overlay an image on a plot and achieve the same effect.</p>
+<pre class="r"><code>library(ggplot2)
+library(scales) # optional, for formatting number
+
+m.muni.income &lt;- ggplot(munip) +
+  geom_sf(aes(fill = income_mean), lwd = .1) + # lwd sets thin borders
+  scale_fill_gradient2( # use diverging color scale around median income,
+    labels = number_format(big.mark = &#39;.&#39;), # format numbers w/t thousands-point.
+    high = &#39;#529FD3&#39;, low = &#39;#FB9316&#39;, # HIVA-logo colors to define ends color range.
+    midpoint = median(munip$income_mean)) + 
+  labs(title = &#39;Spatial income inequality in Belgium&#39;,
+       fill = &quot;Mean income&quot;,
+       caption = &#39;Source: Statbel (fiscal year 2016)&#39;)
+
+m.muni.income</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>library(png)
+hiva_logo &lt;- readPNG(&#39;data/hiva_logo_400x400.png&#39;)
+
+# add logo in plot, specify size through coordinates on x and y-axes.
+m.muni.income &lt;- m.muni.income + 
+  annotation_raster(hiva_logo, ymin = 49.5 ,ymax= 49.8, xmin = 2.5,xmax = 3)
+
+m.muni.income</code></pre>
+<p><img src="questions_answers_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -72,9 +72,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -93,8 +91,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -110,7 +114,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -130,6 +133,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,18 +191,75 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -251,6 +348,16 @@ div.tocify {
 
 </style>
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
 <div class="col-xs-12 col-sm-4 col-md-3">
@@ -289,6 +396,9 @@ div.tocify {
 </li>
 <li>
   <a href="04_plot.html">4. Plot</a>
+</li>
+<li>
+  <a href="questions_answers.html">Q&amp;A</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -399,43 +509,45 @@ worktime &lt;- left_join(map_data, worktime_data, by = c(&#39;CNTR_CODE&#39; = &
 <p><strong>Tip</strong>: Use the R <a href="https://github.com/vincentarelbundock/countrycode#r-countrycode">countrycode package</a> to convert names, codes, etc. before merging. Contains 30+ different country coding schemes, and to 600+ variants of country names in different languages and formats.</p>
 <pre class="r"><code>library(countrycode)
 countrycode(worktime$NUTS_ID, &#39;eurostat&#39;, &#39;ecb&#39;) # official ECB code</code></pre>
-<pre><code>##  [1] &quot;AT&quot; &quot;BG&quot; &quot;CZ&quot; &quot;CH&quot; &quot;BE&quot; &quot;DE&quot; &quot;DK&quot; &quot;EE&quot; &quot;GR&quot; &quot;ES&quot; &quot;HR&quot; &quot;HU&quot; &quot;FI&quot; &quot;FR&quot;
-## [15] &quot;IE&quot; &quot;LI&quot; &quot;LT&quot; &quot;LU&quot; &quot;LV&quot; &quot;ME&quot; &quot;MK&quot; &quot;MT&quot; &quot;NL&quot; &quot;IT&quot; &quot;PT&quot; &quot;RO&quot; &quot;NO&quot; &quot;PL&quot;
-## [29] &quot;SE&quot; &quot;SK&quot; &quot;TR&quot; &quot;GB&quot; &quot;SI&quot;</code></pre>
+<pre><code>##  [1] &quot;BG&quot; &quot;CH&quot; &quot;AL&quot; &quot;CZ&quot; &quot;BE&quot; &quot;AT&quot; &quot;DE&quot; &quot;DK&quot; &quot;EE&quot; &quot;GR&quot; &quot;ES&quot; &quot;FI&quot; &quot;HR&quot; &quot;FR&quot;
+## [15] &quot;HU&quot; &quot;IE&quot; &quot;IT&quot; &quot;LI&quot; &quot;LT&quot; &quot;LU&quot; &quot;LV&quot; &quot;ME&quot; &quot;MK&quot; &quot;MT&quot; &quot;NL&quot; &quot;NO&quot; &quot;PL&quot; &quot;PT&quot;
+## [29] &quot;RO&quot; &quot;RS&quot; &quot;SE&quot; &quot;SI&quot; &quot;SK&quot; &quot;TR&quot; &quot;GB&quot;</code></pre>
 <pre class="r"><code>countrycode(worktime$NUTS_ID, &#39;eurostat&#39;, &#39;un.name.fr&#39;) # full UN name in FR</code></pre>
-<pre><code>##  [1] &quot;Autriche&quot;                                           
-##  [2] &quot;Bulgarie&quot;                                           
-##  [3] &quot;République tchèque&quot;                                 
-##  [4] &quot;Suisse&quot;                                             
+<pre><code>##  [1] &quot;Bulgarie&quot;                                           
+##  [2] &quot;Suisse&quot;                                             
+##  [3] &quot;Albanie&quot;                                            
+##  [4] &quot;République tchèque&quot;                                 
 ##  [5] &quot;Belgique&quot;                                           
-##  [6] &quot;Allemagne&quot;                                          
-##  [7] &quot;Danemark&quot;                                           
-##  [8] &quot;Estonie&quot;                                            
-##  [9] &quot;Grèce&quot;                                              
-## [10] &quot;Espagne&quot;                                            
-## [11] &quot;Croatie&quot;                                            
-## [12] &quot;Hongrie&quot;                                            
-## [13] &quot;Finlande&quot;                                           
+##  [6] &quot;Autriche&quot;                                           
+##  [7] &quot;Allemagne&quot;                                          
+##  [8] &quot;Danemark&quot;                                           
+##  [9] &quot;Estonie&quot;                                            
+## [10] &quot;Grèce&quot;                                              
+## [11] &quot;Espagne&quot;                                            
+## [12] &quot;Finlande&quot;                                           
+## [13] &quot;Croatie&quot;                                            
 ## [14] &quot;France&quot;                                             
-## [15] &quot;Irlande&quot;                                            
-## [16] &quot;Liechtenstein&quot;                                      
-## [17] &quot;Lituanie&quot;                                           
-## [18] &quot;Luxembourg&quot;                                         
-## [19] &quot;Lettonie&quot;                                           
-## [20] &quot;Monténégro&quot;                                         
-## [21] &quot;Ex-République yougoslave de Macédoine&quot;              
-## [22] &quot;Malte&quot;                                              
-## [23] &quot;Pays-Bas&quot;                                           
-## [24] &quot;Italie&quot;                                             
-## [25] &quot;Portugal&quot;                                           
-## [26] &quot;Roumanie&quot;                                           
-## [27] &quot;Norvège&quot;                                            
-## [28] &quot;Pologne&quot;                                            
-## [29] &quot;Suède&quot;                                              
-## [30] &quot;Slovaquie&quot;                                          
-## [31] &quot;Turquie&quot;                                            
-## [32] &quot;Royaume-Uni de Grande-Bretagne et d&#39;Irlande du Nord&quot;
-## [33] &quot;Slovénie&quot;</code></pre>
+## [15] &quot;Hongrie&quot;                                            
+## [16] &quot;Irlande&quot;                                            
+## [17] &quot;Italie&quot;                                             
+## [18] &quot;Liechtenstein&quot;                                      
+## [19] &quot;Lituanie&quot;                                           
+## [20] &quot;Luxembourg&quot;                                         
+## [21] &quot;Lettonie&quot;                                           
+## [22] &quot;Monténégro&quot;                                         
+## [23] &quot;Ex-République yougoslave de Macédoine&quot;              
+## [24] &quot;Malte&quot;                                              
+## [25] &quot;Pays-Bas&quot;                                           
+## [26] &quot;Norvège&quot;                                            
+## [27] &quot;Pologne&quot;                                            
+## [28] &quot;Portugal&quot;                                           
+## [29] &quot;Roumanie&quot;                                           
+## [30] &quot;Serbie&quot;                                             
+## [31] &quot;Suède&quot;                                              
+## [32] &quot;Slovénie&quot;                                           
+## [33] &quot;Slovaquie&quot;                                          
+## [34] &quot;Turquie&quot;                                            
+## [35] &quot;Royaume-Uni de Grande-Bretagne et d&#39;Irlande du Nord&quot;</code></pre>
 </div>
 </div>
 
