@@ -1,0 +1,112 @@
+---
+title: "Questions and answers"
+output: 
+    html_document:
+      number_sections: no
+      toc: yes
+      toc_float: yes
+---
+
+# How can I join Brussels to the rest of the provinces?
+
+```{r}
+
+library(BelgiumMaps.StatBel)
+library(sf)
+library(dplyr)
+
+data("BE_ADMIN_PROVINCE")
+data("BE_ADMIN_REGION")
+prov <- st_as_sf(BE_ADMIN_PROVINCE)
+region <- st_as_sf(BE_ADMIN_REGION)
+
+prov <- prov %>%
+  select(niscode = CD_PROV_REFNIS, label = TX_PROV_DESCR_NL)
+
+brussel <- region %>% filter(
+  TX_RGN_DESCR_NL == 'Brussels Hoofdstedelijk Gewest') %>%
+  select(niscode = CD_RGN_REFNIS, label = TX_RGN_DESCR_NL)
+
+prov_bxl <- rbind(prov, brussel)
+
+qtm(prov_bxl)
+```
+
+# How can I join Brussels as an inset-map?
+
+A related solution is working with an inset-map for Brussels, especially if you want to show details.
+
+```{r}
+
+library(grid)
+data("BE_ADMIN_MUNTY")
+munip <- 
+m_gemeentes <- qtm(BE_ADMIN_MUNTY)
+m_brussel <- qtm(brussel)
+vp_brussel <- viewport(x = 0.2, y = 0.2, width = 0.3, height = 0.3)
+tmap_save(m_gemeentes, insets_tm = m_brussel, insets_vp = vp_brussel)
+
+library(readr)
+# load municipal boundaries
+data("BE_ADMIN_MUNTY")
+munip_map <- st_as_sf(BE_ADMIN_MUNTY)
+
+# load fiscal income data on municipal level
+munip_data <- read_csv(
+  file = 'data/fiscal_incomes_2016.csv', 
+  col_types = cols(
+    munip_label = col_character(),
+    munip_nis = col_character(),
+    n_inhabitants = col_integer(),
+    income_mean = col_integer() ))
+
+# add map and income data together on muncipal level
+munip <- left_join(
+  munip_map, munip_data, 
+  by = c('CD_MUNTY_REFNIS' = 'munip_nis'))
+
+m_munip_income <- qtm(munip %>% filter(TX_RGN_DESCR_NL != 'Brussels Hoofdstedelijk Gewest'), fill = 'income_mean') +
+  tm_legend(legend.outside = TRUE, legend.outside.position="right")
+
+m_brussel_income <- qtm(
+  munip %>% filter(TX_RGN_DESCR_NL == 'Brussels Hoofdstedelijk Gewest'), 
+  fill = 'income_mean') + tm_legend(show=FALSE)
+
+vp_brussel <- viewport(x = 0.2, y = 0.2, width = 0.3, height = 0.3)
+tmap_save(m_munip_income, filename = 'munip_inset.png', width = 1600, height = 800, 
+          insets_tm = m_brussel_income, insets_vp = vp_brussel)
+```
+
+
+# How do I format tmap legends with percentages?
+
+```{r}
+library(scales)
+
+tm_shape(munip) +
+  tm_fill(col = 'income_mean', title = 'Percentage\ntemporary work',
+          # legend.format=list(fun=function(x) paste0(formatC(x, digits=0, format="f"), " %"))
+          legend.format=percent
+          ) +
+  tm_borders(col = 'white', lwd = .5) +
+  tm_layout(frame = FALSE)
+```
+
+
+
+# Possbility of using hex-based binning?
+
+https://www.r-graph-gallery.com/hexbin-map/
+https://ryanhafen.com/blog/geofacet/
+http://www.robert-hickman.eu/post/getis-ord-heatmaps-tutorial/
+
+# Can I add points to a thematic map?
+
+```{r}
+tm_dots()
+```
+
+
+
+# Adding a logo to ggplot-based map?
+

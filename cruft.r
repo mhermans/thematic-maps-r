@@ -1,7 +1,48 @@
+# Comparing size of industrial sites
+
+
+inset maps
+side-by-side
+
+
+
+library(osmdata)
+
+q <- opq(bbox = 'Turin, Italy') %>%
+  add_osm_feature(key = 'landuse', value = 'industrial') %>%
+  osmdata_sf()
+
+qtm(q$osm_polygons %>% filter(osm_id == 2045972))
+
+miafiore <- opq_osm_id(type = "relation", id = 2045972) %>%
+  osmdata_sf()
+qtm(miafiore$osm_multipolygons)
+
+# https://wiki.openstreetmap.org/wiki/NL:Tag:landuse=industrial?uselang=nl
+
+# Officine ICO Ivrea 
+https://www.openstreetmap.org/way/162150668
+
+# Relatie: Tenaris-Dalmine (2569949) 
+https://www.openstreetmap.org/relation/2569949#map=15/45.6396/9.6091
+
+# M Relatie: Fiat Mirafiori (2045972) 
+https://www.openstreetmap.org/relation/2045972
+
+
+qtm(brussel)
+limburg <- prov %>% filter(label == 'Provincie Limburg')
+qtm(limburg)
+st_centroid(brussel)
+
+st_geometry(brussel) + c(0, 10)
+
 # Questions sessions 2019-02-11, 2019-02-14
 # 
 # Spatial join to fix Brussels
 # 
+
+
 # How do I format tmap legends with percentages?
 #   
 # Possbility of using hex-based binning?
