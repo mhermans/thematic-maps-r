@@ -1,4 +1,5 @@
 **Workshop material "Show & tell: making thematic maps in R"**
+<img align="right" width="200" height="200" src="data/leafletmap_screenshot_680x500.png">
 
 This repository contains all the material for the workhop "Show & tell: making thematic maps in R", presented at [HIVA - KU Leuven, 11th and 14th of February 2019](https://mhermans.net/talk/2019-02-11-r-thematic-maps/).
 

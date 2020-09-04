@@ -17,7 +17,7 @@ Learn more:
 
 * [Stackoverflow](https://stackoverflow.com).
 * Documentation tmap (F1).
-* Books: "[An Introduction to R for Spatial Analysis and Mapping](https://books.google.be/books?id=iwJ6DwAAQBAJ) (2018)", "[Geocomputation with R](https://geocompr.robinlovelace.net/]) (full-text)", "[Data Visualization. A practical introduction](https://socviz.co/)" (full text).
+* Books: "[An Introduction to R for Spatial Analysis and Mapping](https://books.google.be/books?id=iwJ6DwAAQBAJ) (2018)", "[Geocomputation with R](https://geocompr.robinlovelace.net/]) (full-text)", "[Data Visualization. A practical introduction](https://socviz.co/)", "[Fundamentals of Data Visualization](https://serialmentor.com/dataviz/geospatial-data.html) (full-text).
 * [Datacamp courses](https://www.datacamp.com/).
 
 
